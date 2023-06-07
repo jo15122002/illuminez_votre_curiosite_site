@@ -1,0 +1,4 @@
+@font-face {
+    font-family: 'BasteleurBold';
+    src: local("BasteleurBold"), url("~/assets/fonts/Basteleur-Bold.ttf") format("truetype");
+}

@@ -9,7 +9,7 @@
 
   <div class="flex-row content-div">
     <div class="flex-column half-width">
-      <h4>Exposition de mai à décembre 2023</h4>
+      <h4 class="date">Exposition de mai à décembre 2023</h4>
       <h1>Illuminez votre curiosité</h1>
       <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage.
         Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, 
@@ -93,5 +93,20 @@
 
 .half-width{
   width: 50%;
+}
+
+.content-div .date{
+  font-family: "Red Hat Display Bold", sans-serif;
+}
+
+.content-div h1{
+  font-family: "BasteleurBold";
+  font-size: 3.5vw;
+}
+
+.content-div p{
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.5vw;
+  line-height: 1.5;
 }
 </style>
