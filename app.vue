@@ -50,10 +50,8 @@ const isVisible = useElementVisibility(videoRef, {
 
 watch(isVisible, (newVisibility) => {
   if (newVisibility) {
-    console.log('visible')
     videoRef.value.play();
   } else {
-    console.log('not visible anymore')
     videoRef.value.currentTime = 0;
     videoRef.value.pause();
   }
