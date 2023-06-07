@@ -1,6 +1,6 @@
 <template>
     <div class="element">
-        <img src="https://cataas.com/cat/says/hi" alt="">
+        <img src="https://cataas.com/cat/says/i'm a fish" alt="">
     </div>
 </template>
 
@@ -10,9 +10,9 @@
 
 <style scoped>
     .element {
+        padding: 0.6%;
         height: 100%;
         aspect-ratio: 1/1;
-        background-color: #f0f0f0;
         border-radius: 20px;
     }
 

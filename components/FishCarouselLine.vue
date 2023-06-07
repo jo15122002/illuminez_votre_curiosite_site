@@ -13,6 +13,10 @@
       <FishCarouselLineElement class="element" />
       <FishCarouselLineElement class="element" />
       <FishCarouselLineElement class="element" />
+      <FishCarouselLineElement class="element" />
+      <FishCarouselLineElement class="element" />
+      <FishCarouselLineElement class="element" />
+      <FishCarouselLineElement class="element" />
     </div>
 </template>
 
@@ -116,8 +120,9 @@ function horizontalLoop(items, config) {
 <style scoped>
     .wrapper {
         width: 100%;
-        height: 20vh;
+        height: 32%;
         display: flex;
         flex-direction: row;
+        margin-bottom: 2%;
     }
 </style>
