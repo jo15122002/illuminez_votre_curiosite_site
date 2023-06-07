@@ -60,6 +60,11 @@ watch(isVisible, (newVisibility) => {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
+
+body{
+  margin: 0px;
+}
+
 .navbar{
   margin: auto;
   margin-top: 3%;
