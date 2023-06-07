@@ -27,10 +27,37 @@
       <FishCarousel class="fishCarousel"/>
     </div>
   </div>
+
+  <div class="fullScreen video-container" id="video">
+    <video src="~/assets/video/video_lorem_ipsum.mp4" loop muted preload="metadata" autoplay ref="videoRef"></video>
+  </div>
+
+  <div>
+
+  </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue'
+import { useElementVisibility } from '@vueuse/core'
+import { is } from '@babel/types';
 
+const videoRef = ref(null)
+
+const isVisible = useElementVisibility(videoRef, {
+  once: false,
+})
+
+watch(isVisible, (newVisibility) => {
+  if (newVisibility) {
+    console.log('visible')
+    videoRef.value.play();
+  } else {
+    console.log('not visible anymore')
+    videoRef.value.currentTime = 0;
+    videoRef.value.pause();
+  }
+});
 </script>
 
 <style>
@@ -151,5 +178,22 @@
   font-family: "Red Hat Display", sans-serif;
   font-size: 1.5vw;
   line-height: 1.5;
+}
+
+.fullscreen{
+  width: 100vw;
+  height: 100vh;
+}
+
+.video-container{
+  overflow: hidden;
+  margin: 0px;
+  margin-top: 10vh;
+}
+
+.video-container video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
