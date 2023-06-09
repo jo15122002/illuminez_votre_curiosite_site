@@ -1,5 +1,6 @@
 <template>
   <div class="navbar">
+    <img src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
       <a href="" class="navbar-item">Réserver</a>
       <a href="" class="navbar-item">Exposition</a>
@@ -63,18 +64,28 @@ watch(isVisible, (newVisibility) => {
 
 body{
   margin: 0px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.body::-webkit-scrollbar{
+  display: none;
 }
 
 .navbar{
   margin: auto;
   margin-top: 3%;
   width: 90vw;
-  height: 10vh;
+  height: 10.1vh;
   border-radius: 20px;
   background-color: #C5E2A6;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.logo{
+  margin-left: 2.5vw;
 }
 
 .content-div{
@@ -93,7 +104,7 @@ body{
 }
 
 .carouselContainer{
-  width: 50%;
+  width: 54.5%;
   height: 100vh;
 }
 
@@ -119,7 +130,7 @@ body{
   padding-right: 3.3vw;
   color: white;
   text-decoration: none;
-  font-size: 1.1vw;
+  font-size: 1.4vw;
   font-family: 'Red Hat Display', sans-serif;
 }
 
