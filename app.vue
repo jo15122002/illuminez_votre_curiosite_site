@@ -12,7 +12,7 @@
     <div class="flex-column half-width description-container">
       <div class="description">
         <h4 class="date">Exposition de juin à décembre 2023</h4>
-        <h1>Illuminez votre curiosité</h1>
+        <h1>Illuminez <br> votre <br> curiosité</h1>
         <div class="bloc-content">
           <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage.
           Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, 
@@ -41,7 +41,6 @@
 <script setup>
 import { ref } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
-import { is } from '@babel/types';
 
 const videoRef = ref(null)
 
