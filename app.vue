@@ -11,14 +11,14 @@
   <div class="flex-row content-div">
     <div class="flex-column half-width description-container">
       <div class="description">
-        <h4 class="date">Exposition de juin à décembre 2023</h4>
-        <h1>Illuminez <br> votre <br> curiosité</h1>
+        <h4 class="date">&nbsp;Exposition de juin à décembre 2023</h4>
+        <h1>Illuminez<br>votre<br>curiosité</h1>
         <div class="bloc-content">
           <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage.
           Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, 
-          en les laissant en autonomie lors d’une exposition interactif.</p>
+          en les laissant en autonomie lors d’une exposition interactive.</p>
           <div class="flex-row buttons-container">
-            <a href="#buySection" class="button buyButton">Acheter un ticket</a>
+            <a href="#buySection" class="button buyButton">Réserver</a>
             <a href="#video" class="button videoButton">Vidéo de l'exposition &#x2198;</a>
           </div>
         </div>
@@ -60,22 +60,27 @@ watch(isVisible, (newVisibility) => {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
 
 body{
   margin: 0px;
+  background-color: #fefcf8;
+}
+
+*{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
-.body::-webkit-scrollbar{
+*::-webkit-scrollbar{
   display: none;
 }
 
 .navbar{
   margin: auto;
   margin-top: 3%;
-  width: 90vw;
-  height: 10.1vh;
+  width: 91.7vw;
+  height: 11.8vh;
   border-radius: 20px;
   background-color: #C5E2A6;
   display: flex;
@@ -98,8 +103,14 @@ body{
   width: 35vw;
 }
 
+.bloc-content p{
+  width: 93%;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .buttons-container{
-  justify-content: space-between;
+  width: 93%;
 }
 
 .carouselContainer{
@@ -129,8 +140,11 @@ body{
   padding-right: 3.3vw;
   color: white;
   text-decoration: none;
-  font-size: 1.4vw;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.46vw;
+  line-height: 37px;
 }
 
 .flex-column{
@@ -150,7 +164,6 @@ body{
   height: auto;
   border-radius: 3.4vw;
   text-align: center;
-  font-family: "Red Hat Display SemiBold", sans-serif;
   justify-content: center;
   align-items: center;
   padding-right: 1.5vw;
@@ -159,12 +172,17 @@ body{
   padding-bottom: 1.8vh;
   padding-top: 1.8vh;
 
-  font-size: 1.5vw;
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
 }
 
 .buyButton{
   background-color: #3AA098;
   color: white;
+  margin-right: 27px;
 }
 
 .videoButton{
@@ -177,20 +195,27 @@ body{
 }
 
 .content-div .date{
-  font-family: "Red Hat Display Bold", sans-serif;
-  font-size: 1.5vw;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .content-div h1{
-  font-family: "BasteleurBold";
-  font-size: 6vw;
+  font-family: "Basteleur";
+  font-style: normal;
+  font-size: 90px;
+  line-height: 112px;
   margin-top: 1%;
+  margin-bottom: 0px;
 }
 
 .content-div p{
-  font-family: "Red Hat Display", sans-serif;
-  font-size: 1.5vw;
-  line-height: 1.5;
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 84px;
 }
 
 .fullscreen{
