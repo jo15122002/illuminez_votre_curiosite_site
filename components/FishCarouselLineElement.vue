@@ -10,10 +10,10 @@
 
 <style scoped>
     .element {
-        padding: 0.6%;
         height: 100%;
         aspect-ratio: 1/1;
         border-radius: 20px;
+        padding-right: 2%;
     }
 
     .element img {

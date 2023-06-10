@@ -6,17 +6,6 @@
       <FishCarouselLineElement class="element" />
       <FishCarouselLineElement class="element" />
       <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
-      <FishCarouselLineElement class="element" />
     </div>
 </template>
 
@@ -105,6 +94,7 @@ function horizontalLoop(items, config) {
       paused: true, // Sets the tween to be paused initially
       repeat: -1, // Makes sure the tween runs infinitely
       speed: props.speed, // Adjusts the speed of the animation
+      paddingRight: 0, // Adjusts the spacing between the boxes
     })
 
     if(!props.reverse){
@@ -120,9 +110,11 @@ function horizontalLoop(items, config) {
 <style scoped>
     .wrapper {
         width: 100%;
-        height: 32%;
+        height: 30%;
         display: flex;
         flex-direction: row;
+        margin: 0px;
         margin-bottom: 2%;
+        padding: 0px;
     }
 </style>
