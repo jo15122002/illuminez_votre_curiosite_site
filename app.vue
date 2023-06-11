@@ -258,6 +258,10 @@ body{
   object-fit: cover;
 }
 
+#discover{
+  padding-top: 0px;
+}
+
 
 @media screen and (max-width: 1024px) {
   .navbar{
