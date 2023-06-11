@@ -33,10 +33,26 @@
     <video src="~/assets/video/video_lorem_ipsum.mp4" loop muted preload="metadata" autoplay ref="videoRef"></video>
   </div>
 
-  <div>
-
-  </div>
-</template>
+  <div id="discover" class="flex-row content-div">
+    <div class="flex-column half-width description-container">
+      <div class="description">
+        <h1>Ce que vous<br>allez découvrir</h1>
+        <div class="bloc-content">
+          <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage. La bioluminescence est une réaction chimique que produisent.</p>
+          <div class="flex-row buttons-container">
+            <a href="#buySection" class="button buyButton">Réserver</a>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="jellyfish">
+    </div>
+    </div>
+    <div>
+      
+    </div>
+  </template>
 
 <script setup>
 import { ref } from 'vue'
@@ -61,6 +77,13 @@ watch(isVisible, (newVisibility) => {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
+
+#jellyfish {
+  background: url("~/assets/images/meduse.png") no-repeat center center;
+  background-position: 80% 130%;
+  width:100%;
+}
 
 body{
   margin: 0px;
@@ -233,5 +256,66 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .navbar{
+    flex-direction: column;
+    height: auto;
+    padding: 1em;
+  }
+
+  .navbar-items-container{
+    justify-content: space-evenly;
+    margin-top: 1em;
+  }
+
+  .navbar-item{
+    font-size: 1.2em; /* adjust as needed */
+  }
+
+  .content-div{
+    flex-direction: column;
+  }
+
+  .description-container, .carouselContainer{
+    width: 100%;
+  }
+
+  .description-container{
+    height: auto;
+  }
+
+  .bloc-content{
+    width: 100%;
+  }
+
+  .bloc-content p{
+    font-size: 18px; /* adjust as needed */
+    line-height: 1.5em;
+  }
+
+  .content-div h1{
+    font-size: 2em; /* adjust as needed */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-item{
+    font-size: 1em; /* adjust as needed */
+  }
+
+  .bloc-content p{
+    font-size: 16px; /* adjust as needed */
+  }
+
+  .content-div h1{
+    font-size: 1.5em; /* adjust as needed */
+  }
+
+  .button{
+    font-size: 24px; /* adjust as needed */
+  }
 }
 </style>
