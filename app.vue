@@ -49,8 +49,10 @@
     <div id="jellyfish">
     </div>
     </div>
-    <div>
-      
+    <div class="discoverCardContainer flex-row">
+      <DiscoverCard/>
+      <DiscoverCard/>
+      <DiscoverCard/>
     </div>
   </template>
 
@@ -260,6 +262,12 @@ body{
 
 #discover{
   padding-top: 0px;
+}
+
+.discoverCardContainer{
+  justify-content: space-between;
+  width: 84.9%;
+  margin: auto;
 }
 
 
