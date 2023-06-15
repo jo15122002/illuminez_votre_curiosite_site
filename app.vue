@@ -54,6 +54,10 @@
       <DiscoverCard/>
       <DiscoverCard/>
     </div>
+
+    <section class="full-screen-section">
+      <BookingSection ></BookingSection>
+    </section>
   </template>
 
 <script setup>
@@ -80,6 +84,16 @@ watch(isVisible, (newVisibility) => {
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
 
+
+.full-screen-section {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+  
+}
 
 #jellyfish {
   background: url("~/assets/images/meduse.png") no-repeat center center;
