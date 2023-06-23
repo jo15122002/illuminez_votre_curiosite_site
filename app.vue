@@ -30,7 +30,7 @@
   </div>
 
   <div class="fullScreen video-container" id="video">
-    <video src="~/assets/video/video_lorem_ipsum.mp4" loop muted preload="metadata" autoplay ref="videoRef"></video>
+    <video src="~/assets/video/bioluminescence.mp4" loop muted preload="metadata" autoplay ref="videoRef"></video>
   </div>
 
   <div id="discover" class="flex-row content-div">
