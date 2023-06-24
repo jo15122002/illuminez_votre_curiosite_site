@@ -116,7 +116,6 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
@@ -353,66 +352,5 @@ body{
   font-size: 18px;
   line-height: 22px;
   margin-top: 6%;
-}
-
-
-@media screen and (max-width: 1024px) {
-  .navbar{
-    flex-direction: column;
-    height: auto;
-    padding: 1em;
-  }
-
-  .navbar-items-container{
-    justify-content: space-evenly;
-    margin-top: 1em;
-  }
-
-  .navbar-item{
-    font-size: 1.2em; /* adjust as needed */
-  }
-
-  .content-div{
-    flex-direction: column;
-  }
-
-  .description-container, .carouselContainer{
-    width: 100%;
-  }
-
-  .description-container{
-    height: auto;
-  }
-
-  .bloc-content{
-    width: 100%;
-  }
-
-  .bloc-content p{
-    font-size: 18px; /* adjust as needed */
-    line-height: 1.5em;
-  }
-
-  .content-div h1{
-    font-size: 2em; /* adjust as needed */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .navbar-item{
-    font-size: 1em; /* adjust as needed */
-  }
-
-  .bloc-content p{
-    font-size: 16px; /* adjust as needed */
-  }
-
-  .content-div h1{
-    font-size: 1.5em; /* adjust as needed */
-  }
-
-  .button{
-    font-size: 24px; /* adjust as needed */
-  }
 }
 </style>
