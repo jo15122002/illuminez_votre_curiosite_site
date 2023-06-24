@@ -20,12 +20,16 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th v-for="date in uniqueDates">{{ date.day }}</th>
+                                        <th v-for="date in uniqueDates" class="day">
+                                            {{ date.day.substr(0, 4) }}
+                                            <br>
+                                            {{ date.day.substr(4) }}
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="date in uniqueDates">
-                                        <td v-for="time in date.times">{{ time }}</td>
+                                    <tr v-for="time in uniqueTimes" :key="time">
+                                        <td class="hour" v-for="date in uniqueDates">{{ time }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -40,6 +44,7 @@
 import { ref, onMounted } from 'vue';
 
 const uniqueDates = ref([]);
+const uniqueTimes = ref([]);
 
 const generateTimes = (hourFrom, hourTo, increments) => {
     const times = [];
@@ -58,7 +63,7 @@ const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
     const uniqueDays = [];
 
     for(let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
-        const dayString = `${date.toLocaleDateString('fr-FR', { weekday: 'short' })} ${date.getDate()}/${('0' + (date.getMonth() + 1)).slice(-2)}`;
+        const dayString = `${date.toLocaleDateString('fr-FR', { weekday: 'short' }).substring(0,1).toUpperCase()}${date.toLocaleDateString('fr-FR', { weekday: 'short' }).substring(1,3)} ${date.getDate()}/${('0' + (date.getMonth() + 1)).slice(-2)}`;
         uniqueDays.push({
             day: dayString,
             times: generateTimes(hourFrom, hourTo, increments)
@@ -70,7 +75,9 @@ const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
 
 onMounted(() => {
     uniqueDates.value = generateDates("2023-06-29", "2023-07-06", 9.5, 11.5, 30);
+    uniqueTimes.value = generateTimes(9.5, 11.5, 30);
 });
+
 </script>
 
 <style>
@@ -89,6 +96,10 @@ onMounted(() => {
     text-align: start;
     font-size: 30px;
     width: 213px;
+}
+
+.select-date{
+    width: 100%;
 }
 
 .selected-date-range{
@@ -154,6 +165,13 @@ onMounted(() => {
     padding: 11px 28px;
     box-sizing: border-box;
     font-size: 24px;
+    margin-right: 44px;
+    margin-bottom: 46px;
+}
+
+.input::placeholder {
+    color: #02295f;
+    font-family: 'Red Hat Display';
 }
 
 .date-table {
@@ -165,14 +183,12 @@ onMounted(() => {
     width: 100%;
 }
 
-.date-table th, .date-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
+.day{
+    white-space: pre-line;
 }
 
-.date-table th {
-    background-color: #f2f2f2;
+.hour{
+
 }
 </style>
 
