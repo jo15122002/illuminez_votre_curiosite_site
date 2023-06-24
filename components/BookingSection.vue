@@ -13,8 +13,10 @@
                         <input class="input" placeholder="Nombre" type="number">
                     </div>
                     <div class="select-date">
-                        <div class="select-date-controls">
-                            <h1 class="selected-date-range">Juin 29 - Juillet 6</h1>
+                        <div class="select-date-controls flex-row">
+                            <h1 class="selected-date-range">{{ firstDayOfWeek.toLocaleString('default', { month: 'long' }) }} {{ firstDayOfWeek.getDate() }} - {{ lastDayOfWeek.toLocaleString('default', { month: 'long' }) }} {{ lastDayOfWeek.getDate() }}</h1>
+                            <p @click="goPreviousWeek" class="weekSelectionButton">&lt;</p>
+                            <p @click="goNextWeek" class="weekSelectionButton">></p>
                         </div>
                         <div class="date-table">
                             <table>
@@ -40,10 +42,54 @@
     </div>
 </template>
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watchEffect } from 'vue';
 
 const uniqueDates = ref([]);
 const uniqueTimes = ref([]);
+
+const currentDate = new Date();
+const firstDayOfWeek = ref(getFirstDayOfWeek(currentDate));
+const lastDayOfWeek = ref(getLastDayOfWeek(currentDate));
+
+function getFirstDayOfWeek(date) {
+  const dayOfWeek = date.getDay();
+  const diff = date.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
+  return new Date(date.setDate(diff));
+}
+
+function getLastDayOfWeek(date) {
+  const dayOfWeek = date.getDay();
+  const diff = date.getDate() - dayOfWeek + 7;
+  return new Date(date.setDate(diff));
+}
+
+function goPreviousWeek() {
+    const prevFirstDay = new Date(firstDayOfWeek.value);
+    prevFirstDay.setDate(prevFirstDay.getDate() - 7);
+    firstDayOfWeek.value = prevFirstDay;
+
+    const prevLastDay = new Date(lastDayOfWeek.value);
+    prevLastDay.setDate(prevLastDay.getDate() - 7);
+    lastDayOfWeek.value = prevLastDay;
+}
+
+function goNextWeek() {
+    const nextFirstDay = new Date(firstDayOfWeek.value);
+    nextFirstDay.setDate(nextFirstDay.getDate() + 7);
+    firstDayOfWeek.value = nextFirstDay;
+
+    const nextLastDay = new Date(lastDayOfWeek.value);
+    nextLastDay.setDate(nextLastDay.getDate() + 7);
+    lastDayOfWeek.value = nextLastDay;
+}
+
+function formatDate(date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+
+  return `${year}-${month}-${day}`;
+}
 
 const generateTimes = (hourFrom, hourTo, increments) => {
     const times = [];
@@ -72,10 +118,14 @@ const generateDates = (dayFrom, dayTo) => {
 };
 
 onMounted(() => {
-    uniqueDates.value = generateDates("2023-06-29", "2023-07-06");
+    uniqueDates.value = generateDates(formatDate(new Date(firstDayOfWeek.value)), formatDate(new Date(lastDayOfWeek.value)));
     uniqueTimes.value = generateTimes(9.5, 11.5, 30);
 });
 
+watchEffect(() => {
+    uniqueDates.value = generateDates(formatDate(new Date(firstDayOfWeek.value)), formatDate(new Date(lastDayOfWeek.value)));
+    uniqueTimes.value = generateTimes(9.5, 11.5, 30);
+});
 </script>
 
 <style>
@@ -210,6 +260,13 @@ onMounted(() => {
 }
 
 .hourContainer, .dateContainer{
+}
+
+.weekSelectionButton{
+    display: flex;
+    height: 100%;
+    text-align: end;
+    align-self: center;
 }
 </style>
 
