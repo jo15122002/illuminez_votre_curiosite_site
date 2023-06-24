@@ -30,7 +30,7 @@
   </div>
 
   <div class="fullScreen video-container" id="video">
-    <video src="~/assets/video/bioluminescence.mp4" loop muted preload="metadata" autoplay ref="videoRef"></video>
+    <video src="~/assets/video/bioluminescence.mp4" loop muted preload="metadata" autoplay ref="videoRef" @click="toggleMute"></video>
   </div>
 
   <div id="discover" class="flex-row content-div">
@@ -78,6 +78,17 @@ watch(isVisible, (newVisibility) => {
     videoRef.value.pause();
   }
 });
+</script>
+
+<script>
+export default {
+  methods: {
+    toggleMute() {
+      const video = this.$refs.videoRef;
+      video.muted = !video.muted;
+    },
+  },
+};
 </script>
 
 <style>
