@@ -27,7 +27,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr v-for="time in uniqueTimes" :key="time">
+                                    <tr v-for="time in uniqueTimes" :key="time" class="hourContainer">
                                         <td class="hour" v-for="date in uniqueDates">{{ time }}</td>
                                     </tr>
                                 </tbody>
@@ -179,6 +179,7 @@ onMounted(() => {
 .date-table table {
     border-collapse: collapse;
     width: 100%;
+    border-spacing: 10px;
 }
 
 .dateContainer{
@@ -195,10 +196,13 @@ onMounted(() => {
     font-size: 14px;
 }
 
+.hourContainer{
+    margin-top: 5%;
+}
+
 .hour{
     background-color: white;
     border-radius: 10%;
-    width: 99px;
     height: 55px;
     font-size: 14px;
     margin-top: 14%;
