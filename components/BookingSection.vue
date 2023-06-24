@@ -19,19 +19,19 @@
                             <h1 class="selected-date-range">Juin 29 - Juillet 6</h1>
                         </div>
                         <div class="date-table">
-        <table>
-            <thead>
-                <tr>
-                    <th v-for="date in uniqueDates">{{ date.day }}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="date in uniqueDates">
-                    <td v-for="time in date.times">{{ time }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th v-for="date in uniqueDates">{{ date.day }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="date in uniqueDates">
+                                        <td v-for="time in date.times">{{ time }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -98,8 +98,8 @@ line-height: 33px;
 }
 
 .bg-calamar-img {
-    object-fit: cover;
-    object-position: center 10%;
+    object-fit:contain ;
+    object-position: left;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -108,20 +108,24 @@ line-height: 33px;
 
 .bg-calamar-wrapper {
     position: relative;
-    margin: 5em;
+    margin: 4em;
     height: 100%;
     border-radius: 20px;
     background-color: rgba(176, 208, 225, 0.3);
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     box-sizing: border-box;
 }
 
 .reservation-form {
+    position: inherit;
     z-index: 1;
     text-align: center;
+    right: 5.9%;
+    color: #02295f;
+    font-family: "Red Hat Display";
 }
 
 .info-form {
