@@ -73,9 +73,14 @@
       </div>
     </div>
 
-    <footer>
-      <div>&copy;Illuminez votre curiosité 2023</div>
-    </footer>
+    <div class="footer">
+      <div class="navbar-items-container">
+        <a href="" class="navbar-item">Réserver</a>
+        <a href="" class="navbar-item">Exposition</a>
+        <a href="" class="navbar-item">Contact</a>
+      </div>
+      <div class="copyright">&copy;Illuminez votre curiosité 2023</div>
+    </div>
   </template>
 
 <script setup>
@@ -111,7 +116,9 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
 .full-screen-section {
@@ -218,9 +225,8 @@ body{
   color: white;
   text-decoration: none;
   font-family: 'Red Hat Display';
-  font-style: normal;
   font-weight: 600;
-  font-size: 1.46vw;
+  font-size: 28px;
   line-height: 37px;
 }
 
@@ -304,6 +310,7 @@ body{
   overflow: hidden;
   margin: 0px;
   margin-top: 10vh;
+  aspect-ratio: 16/9;
 }
 
 .video-container video{
@@ -322,18 +329,30 @@ body{
   margin: auto;
 }
 
-footer{
-  width: 100%;
-  height: 100px;
-  background-color: #3aa098;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.findUs{
+  justify-content: space-around;
+  margin-bottom: 5%;
 }
 
-.findUs{
-  /* space between */
-  justify-content: space-around;
+.footer{
+  width: 100%;
+  background-color: #3aa098;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+
+.copyright{
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 6%;
 }
 
 
