@@ -91,16 +91,17 @@ onMounted(() => {
 }
 
 .form-title {
-line-height: 33px;
-  font-weight: 600;
-  display: inline-block;
-  width: 213px;
+    line-height: 33px;
+    font-weight: 600;
+    display: inline-block;
+    width: 213px;
 }
 
 .bg-calamar-img {
-    object-fit:contain ;
+    position: inherit;
+    object-fit: contain;
     object-position: left;
-    position: absolute;
+    left: 3.5%;
     width: 100%;
     height: 100%;
     
