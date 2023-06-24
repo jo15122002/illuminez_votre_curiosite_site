@@ -55,7 +55,7 @@
       <DiscoverCard/>
     </div>
 
-    <section class="full-screen-section">
+    <section>
       <BookingSection ></BookingSection>
     </section>
 
@@ -115,7 +115,7 @@ export default {
 
 
 .full-screen-section {
-  display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
