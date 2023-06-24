@@ -20,10 +20,9 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th v-for="date in uniqueDates" class="day">
-                                            {{ date.day.substr(0, 4) }}
-                                            <br>
-                                            {{ date.day.substr(4) }}
+                                        <th v-for="date in uniqueDates" class="dateContainer">
+                                            <p class="weekDay">{{ date.day.substr(0, 4) }}</p>
+                                            <p class="date">{{ date.day.substr(4) }}</p>
                                         </th>
                                     </tr>
                                 </thead>
@@ -51,12 +50,12 @@ const generateTimes = (hourFrom, hourTo, increments) => {
     for(let i = hourFrom; i < hourTo; i += increments / 60) {
         const hour = Math.floor(i);
         const minute = (i - hour) * 60;
-        times.push(`${('0' + hour).slice(-2)}:${('0' + minute).slice(-2)}`);
+        times.push(`${('0' + hour).slice(-2)}H${('0' + minute).slice(-2)}`);
     }
     return times;
 };
 
-const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
+const generateDates = (dayFrom, dayTo) => {
     const startDate = new Date(dayFrom);
     const endDate = new Date(dayTo);
 
@@ -65,8 +64,7 @@ const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
     for(let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
         const dayString = `${date.toLocaleDateString('fr-FR', { weekday: 'short' }).substring(0,1).toUpperCase()}${date.toLocaleDateString('fr-FR', { weekday: 'short' }).substring(1,3)} ${date.getDate()}/${('0' + (date.getMonth() + 1)).slice(-2)}`;
         uniqueDays.push({
-            day: dayString,
-            times: generateTimes(hourFrom, hourTo, increments)
+            day: dayString
         });
     }
 
@@ -74,7 +72,7 @@ const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
 };
 
 onMounted(() => {
-    uniqueDates.value = generateDates("2023-06-29", "2023-07-06", 9.5, 11.5, 30);
+    uniqueDates.value = generateDates("2023-06-29", "2023-07-06");
     uniqueTimes.value = generateTimes(9.5, 11.5, 30);
 });
 
@@ -183,12 +181,27 @@ onMounted(() => {
     width: 100%;
 }
 
-.day{
-    white-space: pre-line;
+.dateContainer{
+    font-weight: 100;
+}
+
+.weekDay{
+    margin: 0px;
+    font-size: 24px;
+}
+
+.date{
+    margin: 0px;
+    font-size: 14px;
 }
 
 .hour{
-
+    background-color: white;
+    border-radius: 10%;
+    width: 99px;
+    height: 55px;
+    font-size: 14px;
+    margin-top: 14%;
 }
 </style>
 
