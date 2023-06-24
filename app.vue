@@ -58,6 +58,24 @@
     <section class="full-screen-section">
       <BookingSection ></BookingSection>
     </section>
+
+    <div class="findUs flex-row">
+      <img src="./assets/images/damier.png" alt="">
+      <div class="description">
+        <h1>Où nous<br>retrouver ?</h1>
+        <div class="bloc-content">
+          <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage. La bioluminescence est une réaction chimique que produisent.</p>
+          <div class="flex-row buttons-container">
+            <a href="#buySection" class="button buyButton">Se rendre à l'exposition &#x2198;</a>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>&copy;Illuminez votre curiosité 2023</div>
+    </footer>
   </template>
 
 <script setup>
@@ -171,6 +189,15 @@ body{
 .description{
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.description h1{
+  font-family: 'Basteleur';
+  font-style: normal;
+  color: #02295F;
+  font-weight: 400;
+  font-size: 90px;
+  line-height: 122px;
 }
 
 .description-container{
@@ -293,6 +320,20 @@ body{
   justify-content: space-between;
   width: 84.9%;
   margin: auto;
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  background-color: #3aa098;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.findUs{
+  /* space between */
+  justify-content: space-around;
 }
 
 
