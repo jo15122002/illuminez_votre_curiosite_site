@@ -9,9 +9,7 @@
                         <input class="input" placeholder="Nom" type="text">
                         <input class="input" placeholder="Prénom" type="text">
                         <input class="input" placeholder="Adresse mail" type="email">
-                    </div>
-                    <div class="row">
-                        <input class="input" placeholder="Téléphone" type="number">
+                        <input class="input" placeholder="Téléphone" type="text">
                         <input class="input" placeholder="Nombre" type="number">
                     </div>
                     <div class="select-date">
@@ -71,14 +69,9 @@ const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
 };
 
 onMounted(() => {
-    uniqueDates.value = generateDates("2023-06-29", "2023-07-06", 9, 10, 30);
+    uniqueDates.value = generateDates("2023-06-29", "2023-07-06", 9.5, 11.5, 30);
 });
 </script>
-
-
-
-
-
 
 <style>
 * {
@@ -93,24 +86,31 @@ onMounted(() => {
 .form-title {
     line-height: 33px;
     font-weight: 600;
-    display: inline-block;
+    text-align: start;
+    font-size: 30px;
     width: 213px;
+}
+
+.selected-date-range{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 33px;
+    text-align: start;
+    font-size: 30px;
 }
 
 .bg-calamar-img {
     position: inherit;
     object-fit: contain;
     object-position: left;
-    left: 3.5%;
-    width: 100%;
-    height: 100%;
-    
+    left: -37.5%;
 }
 
 .bg-calamar-wrapper {
     position: relative;
-    margin: 4em;
+    margin: 5em;
     height: 100%;
+    width: 90%;
     border-radius: 20px;
     background-color: rgba(176, 208, 225, 0.3);
     overflow: hidden;
@@ -121,7 +121,9 @@ onMounted(() => {
 }
 
 .reservation-form {
-    position: inherit;
+    height: 84.9%;
+    width: 54.5%;
+    position: absolute;
     z-index: 1;
     text-align: center;
     right: 5.9%;
@@ -139,7 +141,9 @@ onMounted(() => {
 .row {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px;
+    width: 100%;
 }
 
 .input {
