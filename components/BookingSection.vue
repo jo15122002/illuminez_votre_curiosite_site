@@ -97,7 +97,7 @@ onMounted(() => {
 }
 
 .select-date{
-    width: 100%;
+    width: 102%;
 }
 
 .selected-date-range{
@@ -174,12 +174,13 @@ onMounted(() => {
 
 .date-table {
     margin-top: 20px;
+    margin: -30px;
 }
 
 .date-table table {
-    border-collapse: collapse;
+    border-collapse: separate;
     width: 100%;
-    border-spacing: 10px;
+    border-spacing: 30px;
 }
 
 .dateContainer{
@@ -206,6 +207,9 @@ onMounted(() => {
     height: 55px;
     font-size: 14px;
     margin-top: 14%;
+}
+
+.hourContainer, .dateContainer{
 }
 </style>
 
