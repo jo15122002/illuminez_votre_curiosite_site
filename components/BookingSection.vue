@@ -58,7 +58,7 @@ const generateDates = (dayFrom, dayTo, hourFrom, hourTo, increments) => {
     const uniqueDays = [];
 
     for(let date = new Date(startDate); date <= endDate; date.setDate(date.getDate() + 1)) {
-        const dayString = `${date.toLocaleDateString('en-US', { weekday: 'short' })} ${date.getDate()}/${('0' + (date.getMonth() + 1)).slice(-2)}`;
+        const dayString = `${date.toLocaleDateString('fr-FR', { weekday: 'short' })} ${date.getDate()}/${('0' + (date.getMonth() + 1)).slice(-2)}`;
         uniqueDays.push({
             day: dayString,
             times: generateTimes(hourFrom, hourTo, increments)
