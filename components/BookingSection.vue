@@ -14,7 +14,7 @@
                     </div>
                     <div class="select-date">
                         <div class="select-date-controls flex-row">
-                            <h1 class="selected-date-range">{{ firstDayOfWeek.toLocaleString('default', { month: 'long' }) }} {{ firstDayOfWeek.getDate() }} - {{ lastDayOfWeek.toLocaleString('default', { month: 'long' }) }} {{ lastDayOfWeek.getDate() }}</h1>
+                            <h1 class="selected-date-range">{{ $t(firstDayOfWeek.toLocaleString('default', { month: 'long' }).substring(0,1).toUpperCase() + firstDayOfWeek.toLocaleString('default', { month: 'long' }).substring(1)) }} {{ firstDayOfWeek.getDate() }} - {{ $t(lastDayOfWeek.toLocaleString('default', { month: 'long' }).substring(0,1).toUpperCase() + lastDayOfWeek.toLocaleString('default', { month: 'long' }).substring(1)) }} {{ lastDayOfWeek.getDate() }}</h1>
                             <div class="flex-row controls-container">
                                 <p @click="goPreviousWeek" class="weekSelectionButton previousWeekSelectionButton">&lt;</p>
                                 <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
