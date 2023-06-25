@@ -1,50 +1,18 @@
 # Illuminez Votre Curiosité - Site Vitrine
 
-"Illuminez Votre Curiosité" est un site vitrine développé avec Nuxt 3 pour le projet du même nom. Le projet vise à stimuler la curiosité et l'engagement dans divers domaines d'intérêt【5†source】.
-
-## Dernière modification
-
-La dernière modification, commise par jo15122002, portait sur l'implémentation du changement de semaine dans le calendrier【6†source】.
-
-## Statistiques du projet
-
-Le projet compte actuellement 40 commits【7†source】.
+"Illuminez Votre Curiosité" est un site vitrine développé avec Nuxt 3 pour le projet du même nom. Le projet vise à stimuler la curiosité et l'engagement dans l'univers de la bioluminescence.
 
 ## Langages utilisés
 
-Le projet est principalement écrit en Vue (98.8%), avec d'autres langages (1.2%) utilisés pour diverses fonctionnalités et configurations【13†source】.
-
-## Structure du projet
-
-Le projet comprend plusieurs répertoires et fichiers, y compris :
-
-- `assets`
-- `components`
-- `layouts`
-- `public`
-- `server`
-- `.gitignore`
-- `.npmrc`
-- `README.md`
-- `app.vue`
-- `nuxt.config.ts`
-- `package-lock.json`
-- `package.json`
-- `tsconfig.json`【8†source】.
+Le projet est principalement écrit en Vue (98.8%), avec d'autres langages (1.2%) utilisés pour diverses fonctionnalités et configurations.
 
 ## Installation
 
-Pour installer les dépendances du projet, exécutez l'une des commandes suivantes en fonction de votre gestionnaire de paquets :
+Pour installer les dépendances du projet, exécutez la commande suivante :
 
 ```bash
-# yarn
-yarn install
-
 # npm
 npm install
-
-# pnpm
-pnpm install
 ```
 
 ## Développement
@@ -69,7 +37,7 @@ Pour prévisualiser localement la construction de production, exécutez :
 npm run preview
 ```
 
-Consultez la documentation de déploiement pour plus d'informations【9†source】.
+Consultez la documentation de déploiement pour plus d'informations.
 
 ## Contributeurs
 
