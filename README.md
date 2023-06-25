@@ -1,25 +1,23 @@
-# Nuxt 3 Minimal Starter
+# Illuminez Votre Curiosité - Site Vitrine
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+"Illuminez Votre Curiosité" est un site vitrine développé avec Nuxt 3 pour le projet du même nom. Le projet vise à stimuler la curiosité et l'engagement dans l'univers de la bioluminescence.
 
-## Setup
+## Langages utilisés
 
-Make sure to install the dependencies:
+Le projet est principalement écrit en Vue (98.8%), avec d'autres langages (1.2%) utilisés pour diverses fonctionnalités et configurations.
+
+## Installation
+
+Pour installer les dépendances du projet, exécutez la commande suivante :
 
 ```bash
-# yarn
-yarn install
-
 # npm
 npm install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
+## Développement
 
-Start the development server on `http://localhost:3000`
+Pour démarrer le serveur de développement sur `http://localhost:3000`, exécutez :
 
 ```bash
 npm run dev
@@ -27,16 +25,25 @@ npm run dev
 
 ## Production
 
-Build the application for production:
+Pour construire l'application pour la production, exécutez :
 
 ```bash
 npm run build
 ```
 
-Locally preview production build:
+Pour prévisualiser localement la construction de production, exécutez :
 
 ```bash
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Consultez la documentation de déploiement pour plus d'informations.
+
+## Contributeurs
+
+Les principaux contributeurs au projet sont :
+
+- jo15122002
+- Roxane-gll
+
+---
