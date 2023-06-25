@@ -19,6 +19,10 @@
                                 <p @click="goPreviousWeek" class="weekSelectionButton previousWeekSelectionButton">&lt;</p>
                                 <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
                             </div>
+                            <div class="timeOfDaySelection flex-row">
+                                <p @click="selectTimeOfDay" class="morning">Matinée</p>
+                                <p @click="selectTimeOfDay" class="afternoon">Après-midi</p>
+                            </div>
                         </div>
                         <div class="date-table">
                             <table>
@@ -52,6 +56,9 @@ const uniqueTimes = ref([]);
 const currentDate = new Date();
 const firstDayOfWeek = ref(getFirstDayOfWeek(currentDate));
 const lastDayOfWeek = ref(getLastDayOfWeek(currentDate));
+
+const firstHourOfTimeOfDay = ref(9.5);
+const lastHourOfTimeOfDay = ref(11.5);
 
 function getFirstDayOfWeek(date) {
   const dayOfWeek = date.getDay();
@@ -119,14 +126,31 @@ const generateDates = (dayFrom, dayTo) => {
     return uniqueDays;
 };
 
+const selectTimeOfDay = (e) => {
+    const target = e.target;
+    console.log(target)
+    const timeOfDay = target.classList.contains('morning') ? 'morning' : 'afternoon';
+    target.classList.toggle('timeOfDaySelected');
+    const otherTimeOfDay = target.classList.contains('morning') ? 'afternoon' : 'morning';
+    target.parentNode.querySelector(`.${otherTimeOfDay}`).classList.remove('timeOfDaySelected');
+
+    if(timeOfDay === 'morning') {
+        firstHourOfTimeOfDay.value = 9.5;
+        lastHourOfTimeOfDay.value = 11.5;
+    } else {
+        firstHourOfTimeOfDay.value = 14;
+        lastHourOfTimeOfDay.value = 16;
+    }
+};
+
 onMounted(() => {
     uniqueDates.value = generateDates(formatDate(new Date(firstDayOfWeek.value)), formatDate(new Date(lastDayOfWeek.value)));
-    uniqueTimes.value = generateTimes(9.5, 11.5, 30);
+    uniqueTimes.value = generateTimes(firstHourOfTimeOfDay.value, lastHourOfTimeOfDay.value, 30);
 });
 
 watchEffect(() => {
     uniqueDates.value = generateDates(formatDate(new Date(firstDayOfWeek.value)), formatDate(new Date(lastDayOfWeek.value)));
-    uniqueTimes.value = generateTimes(9.5, 11.5, 30);
+    uniqueTimes.value = generateTimes(firstHourOfTimeOfDay.value, lastHourOfTimeOfDay.value, 30);
 });
 </script>
 
@@ -294,6 +318,32 @@ watchEffect(() => {
     height: 100%;
     margin-left: 65px;
     margin-right: 65px;
+}
+
+.timeOfDaySelection{
+    height: 100%;
+    align-self: center;
+}
+
+.timeOfDaySelection p{
+    background-color: white;
+    padding: 11px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+.morning{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.afternoon{
+    border-radius: 0px 10px 10px 0px;
+}
+
+.timeOfDaySelected{
+    background-color: #3aa098 !important;
+    color: white;
 }
 </style>
 
