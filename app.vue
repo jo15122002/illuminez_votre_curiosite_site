@@ -63,7 +63,7 @@
       <div class="description">
         <h1>{{ $t('findUs.title') }}</h1>
         <div class="bloc-content">
-          <p>{{ $t('findUs.content') }}</p>
+          <p class="adress">3 Esplanade Augustin Aussedat<br>Cran-Gevrier, 74960<br>France</p>
           <div class="flex-row buttons-container">
             <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }}</a>
           </div>
@@ -382,5 +382,15 @@ body{
   font-size: 18px;
   line-height: 22px;
   margin-top: 6%;
+}
+
+.adress{
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 2%;
+  color: #02295F;
 }
 </style>
