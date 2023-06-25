@@ -1,0 +1,65 @@
+{
+  "Lun": "Mon",
+  "Mar": "Tue",
+  "Mer": "Wed",
+  "Jeu": "Thu",
+  "Ven": "Fri",
+  "Sam": "Sat",
+  "Dim": "Sun",
+  "navbar": {
+    "book": "Book",
+    "exhibition": "Exhibition",
+    "contact": "Contact"
+  },
+  "description": {
+    "date": "Exhibition from June to December 2023",
+    "title": "Illuminez votre curiosité",
+    "content": "Bioluminescence is a chemical reaction produced by living organisms for various purposes. Offer your children a new way to discover and learn about bioluminescent species by letting them explore an interactive exhibition on their own.",
+    "button": {
+      "book": "Book",
+      "video": "Exhibition Video ↘"
+    }
+  },
+  "discover": {
+    "title": "What You'll Discover",
+    "content": "Bioluminescence is a chemical reaction produced by living organisms for various purposes. Bioluminescence is a chemical reaction produced by living organisms.",
+    "button": {
+      "book": "Book"
+    }
+  },
+  "findUs": {
+    "title": "Where to Find Us",
+    "content": "Bioluminescence is a chemical reaction produced by living organisms for various purposes. Bioluminescence is a chemical reaction produced by living organisms.",
+    "button": {
+      "exhibition": "Visit Exhibition ↘"
+    }
+  },
+  "footer": {
+    "links": {
+      "book": "Book",
+      "exhibition": "Exhibition",
+      "contact": "Contact"
+    },
+    "copyright": "© Illuminez votre curiosité 2023"
+  },
+  "common": {
+    "welcome": "Welcome to",
+    "hello": "Hello"
+  },
+  "infoForm": {
+    "inputs": {
+      "name": "Name",
+      "firstName": "First Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "number": "Number"
+    }
+  },
+  "reservation": {
+    "formTitle": "Booking",
+    "timeOfDaySelection": {
+      "morning": "Morning",
+      "afternoon": "Afternoon"
+    }
+  }
+}

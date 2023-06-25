@@ -2,24 +2,22 @@
   <div class="navbar">
     <img src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
-      <a href="" class="navbar-item">Réserver</a>
-      <a href="" class="navbar-item">Exposition</a>
-      <a href="" class="navbar-item">Contact</a>
+      <a href="" class="navbar-item">{{ $t('navbar.book') }}</a>
+      <a href="" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
+      <a href="" class="navbar-item">{{ $t('navbar.contact') }}</a>
     </div>
   </div>
 
   <div class="flex-row content-div">
     <div class="flex-column half-width description-container">
       <div class="description">
-        <h4 class="date">&nbsp;Exposition de juin à décembre 2023</h4>
-        <h1>Illuminez<br>votre<br>curiosité</h1>
+        <h4 class="date">&nbsp;{{ $t('description.date') }}</h4>
+        <h1>{{ $t('description.title') }}</h1>
         <div class="bloc-content">
-          <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage.
-          Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, 
-          en les laissant en autonomie lors d’une exposition interactive.</p>
+          <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
-            <a href="#buySection" class="button buyButton">Réserver</a>
-            <a href="#video" class="button videoButton">Vidéo de l'exposition &#x2198;</a>
+            <a href="#buySection" class="button buyButton">{{ $t('description.button.book') }}</a>
+            <a href="#video" class="button videoButton">{{ $t('description.button.video') }}</a>
           </div>
         </div>
       </div>
@@ -36,12 +34,11 @@
   <div id="discover" class="flex-row content-div">
     <div class="flex-column half-width description-container">
       <div class="description">
-        <h1>Ce que vous<br>allez découvrir</h1>
+        <h1>{{ $t('discover.title') }}</h1>
         <div class="bloc-content">
-          <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage. La bioluminescence est une réaction chimique que produisent.</p>
+          <p>{{ $t('discover.content') }}</p>
           <div class="flex-row buttons-container">
-            <a href="#buySection" class="button buyButton">Réserver</a>
-        
+            <a href="#buySection" class="button buyButton">{{ $t('discover.button.book') }}</a>
           </div>
         </div>
       </div>
@@ -62,12 +59,11 @@
     <div class="findUs flex-row">
       <img src="./assets/images/damier.png" alt="">
       <div class="description">
-        <h1>Où nous<br>retrouver ?</h1>
+        <h1>{{ $t('findUs.title') }}</h1>
         <div class="bloc-content">
-          <p>La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage. La bioluminescence est une réaction chimique que produisent.</p>
+          <p>{{ $t('findUs.content') }}</p>
           <div class="flex-row buttons-container">
-            <a href="#buySection" class="button buyButton">Se rendre à l'exposition &#x2198;</a>
-        
+            <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }}</a>
           </div>
         </div>
       </div>
@@ -75,9 +71,9 @@
 
     <div class="footer">
       <div class="navbar-items-container">
-        <a href="" class="navbar-item">Réserver</a>
-        <a href="" class="navbar-item">Exposition</a>
-        <a href="" class="navbar-item">Contact</a>
+        <a href="" class="navbar-item">{{ $t('footer.links.book') }}</a>
+        <a href="" class="navbar-item">{{ $t('footer.links.exhibition') }}</a>
+        <a href="" class="navbar-item">{{ $t('footer.links.contact') }}</a>
       </div>
       <div class="copyright">&copy;Illuminez votre curiosité 2023</div>
     </div>

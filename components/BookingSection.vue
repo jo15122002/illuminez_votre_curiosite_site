@@ -3,14 +3,14 @@
         <div class="bg-calamar-wrapper">
             <img class="bg-calamar-img" alt="" src="~assets/images/calamar.png">
             <div class="reservation-form">
-                <h1 class="form-title">Réservation</h1>
-                <div class="info-form">
+                <h1 class="form-title">{{ $t('reservation.formTitle') }}</h1>
+                    <div class="info-form">
                     <div class="row">
-                        <input class="input" placeholder="Nom" type="text">
-                        <input class="input" placeholder="Prénom" type="text">
-                        <input class="input" placeholder="Adresse mail" type="email">
-                        <input class="input" placeholder="Téléphone" type="text">
-                        <input class="input" placeholder="Nombre" type="number">
+                        <input class="input" :placeholder="$t('infoForm.inputs.name')" type="text">
+                        <input class="input" :placeholder="$t('infoForm.inputs.firstName')" type="text">
+                        <input class="input" :placeholder="$t('infoForm.inputs.email')" type="email">
+                        <input class="input" :placeholder="$t('infoForm.inputs.phone')" type="text">
+                        <input class="input" :placeholder="$t('infoForm.inputs.number')" type="number">
                     </div>
                     <div class="select-date">
                         <div class="select-date-controls flex-row">
@@ -20,8 +20,8 @@
                                 <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
                             </div>
                             <div class="timeOfDaySelection flex-row">
-                                <p @click="selectTimeOfDay" class="morning timeOfDaySelected">Matinée</p>
-                                <p @click="selectTimeOfDay" class="afternoon">Après-midi</p>
+                                <p @click="selectTimeOfDay" class="morning timeOfDaySelected" :class="{ timeOfDaySelected: timeOfDay === 'morning' }">{{ $t('reservation.timeOfDaySelection.morning') }}</p>
+                                <p @click="selectTimeOfDay" class="afternoon" :class="{ timeOfDaySelected: timeOfDay === 'afternoon' }">{{ $t('reservation.timeOfDaySelection.afternoon') }}</p>
                             </div>
                         </div>
                         <div class="date-table">
@@ -29,7 +29,7 @@
                                 <thead>
                                     <tr>
                                         <th v-for="date in uniqueDates" class="dateContainer">
-                                            <p class="weekDay">{{ date.day.substr(0, 4) }}</p>
+                                            <p class="weekDay">{{ $t(date.day.substr(0, 4)) }}</p>
                                             <p class="date">{{ date.day.substr(4) }}</p>
                                         </th>
                                     </tr>

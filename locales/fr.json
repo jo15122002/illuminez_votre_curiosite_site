@@ -1,0 +1,66 @@
+{
+  "Lun": "Lun",
+  "Mar": "Mar",
+  "Mer": "Mer",
+  "Jeu": "Jeu",
+  "Ven": "Ven",
+  "Sam": "Sam",
+  "Dim": "Dim",
+  "navbar": {
+    "home": "Accueil",
+    "book": "Réserver",
+    "exhibition": "Exposition",
+    "contact": "Contact"
+  },
+  "description": {
+    "date": "Exposition de juin à décembre 2023",
+    "title": "Illuminez votre curiosité",
+    "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, en les laissant en autonomie lors d’une exposition interactive.",
+    "button": {
+      "book": "Réserver",
+      "video": "Vidéo de l'exposition ↘"
+    }
+  },
+  "discover": {
+    "title": "Ce que vous allez découvrir",
+    "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. La bioluminescence est une réaction chimique que produisent.",
+    "button": {
+      "book": "Réserver"
+    }
+  },
+  "findUs": {
+    "title": "Où nous retrouver ?",
+    "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. La bioluminescence est une réaction chimique que produisent.",
+    "button": {
+      "exhibition": "Se rendre à l'exposition ↘"
+    }
+  },
+  "footer": {
+    "links": {
+      "book": "Réserver",
+      "exhibition": "Exposition",
+      "contact": "Contact"
+    },
+    "copyright": "© Illuminez votre curiosité 2023"
+  },
+  "common": {
+    "welcome": "Bienvenue",
+    "hello": "Bonjour"
+  },
+  "reservation": {
+    "formTitle": "Réservation",
+    "timeOfDaySelection": {
+      "morning": "Matinée",
+      "afternoon": "Après-midi"
+    }
+  },
+  "infoForm": {
+    "inputs": {
+      "name": "Nom",
+      "firstName": "Prénom",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "number": "Nombre"
+    }
+  }
+}
