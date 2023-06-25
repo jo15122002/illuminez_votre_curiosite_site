@@ -29,7 +29,7 @@
                                 <thead>
                                     <tr>
                                         <th v-for="date in uniqueDates" class="dateContainer">
-                                            <p class="weekDay">{{ $t(date.day.substr(0, 4)) }}</p>
+                                            <p class="weekDay">{{ $t(date.day.substr(0, 3)) }}</p>
                                             <p class="date">{{ date.day.substr(4) }}</p>
                                         </th>
                                     </tr>
