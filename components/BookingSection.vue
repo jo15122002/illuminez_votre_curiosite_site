@@ -15,8 +15,10 @@
                     <div class="select-date">
                         <div class="select-date-controls flex-row">
                             <h1 class="selected-date-range">{{ firstDayOfWeek.toLocaleString('default', { month: 'long' }) }} {{ firstDayOfWeek.getDate() }} - {{ lastDayOfWeek.toLocaleString('default', { month: 'long' }) }} {{ lastDayOfWeek.getDate() }}</h1>
-                            <p @click="goPreviousWeek" class="weekSelectionButton">&lt;</p>
-                            <p @click="goNextWeek" class="weekSelectionButton">></p>
+                            <div class="flex-row controls-container">
+                                <p @click="goPreviousWeek" class="weekSelectionButton previousWeekSelectionButton">&lt;</p>
+                                <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
+                            </div>
                         </div>
                         <div class="date-table">
                             <table>
@@ -158,6 +160,11 @@ watchEffect(() => {
     font-size: 30px;
 }
 
+.select-date-controls{
+    display: flex;
+    margin-top: 20px;
+}
+
 .bg-calamar-img {
     position: inherit;
     object-fit: contain;
@@ -263,10 +270,30 @@ watchEffect(() => {
 }
 
 .weekSelectionButton{
+    font-size: x-large;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
     height: 100%;
-    text-align: end;
     align-self: center;
+    background-color: white;
+}
+
+.nextWeekSelectionButton{
+    border-radius: 0px 10px 10px 0px;
+    border-left: 1px solid #02295f;
+}
+
+.previousWeekSelectionButton{
+    border-radius: 10px 0px 0px 10px;
+    border-right: 1px solid #02295f;
+}
+
+.controls-container{
+    height: 100%;
+    margin-left: 65px;
+    margin-right: 65px;
 }
 </style>
 
