@@ -74,5 +74,11 @@
       "number": "Nombre"
     }
   },
-  "seeMore": "Voir plus ↘"
+  "seeMore": "Voir plus ↘",
+  "La réaction chimique": "La réaction chimique",
+  "Les usages": "Les usages",
+  "L'écosystème": "L'écosystème",
+  "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques." : "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques. ",
+  "À quoi sert cette bioluminescence ? Sous l'océan, chaque être vivant l’utilise pour une raison bien précise : se reproduire, chasser, se camoufler ou se protéger par exemple.": "À quoi sert cette bioluminescence ? Sous l'océan, chaque être vivant l’utilise pour une raison bien précise : se reproduire, chasser, se camoufler ou se protéger par exemple.",
+  "Tous ces êtres vivants cohabitent ensemble dans l’océan, ils se chassent, se reproduisent et nagent ensemble. C’est ce qu’on appelle un écosystème." : "Tous ces êtres vivants cohabitent ensemble dans l’océan, ils se chassent, se reproduisent et nagent ensemble. C’est ce qu’on appelle un écosystème."
 }

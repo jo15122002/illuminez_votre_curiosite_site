@@ -4,9 +4,9 @@
             <img :src=props.logoPath alt="">
         </div>
         <br>
-        <h1>{{ props.title }}</h1>
-        <p>{{ props.description }}</p>
-        <a :href=props.buttonRef class="button">Voir plus &#x2198;</a>
+        <h1>{{ $t(props.title) }}</h1>
+        <p>{{ $t(props.description) }}</p>
+        <a :href=props.buttonRef class="button">{{ $t("seeMore") }}</a>
     </div>
 </template>
 
@@ -56,6 +56,7 @@ const props = defineProps({
         font-family: 'Red Hat Display';
         font-size: 24px;
         margin-top: 1rem;
+        height: 34%;
     }
 
     .button{
