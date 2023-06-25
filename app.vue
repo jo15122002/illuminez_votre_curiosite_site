@@ -12,7 +12,7 @@
     <div class="flex-column half-width description-container">
       <div class="description">
         <h4 class="date">&nbsp;{{ $t('description.date') }}</h4>
-        <h1>{{ $t('description.title') }}</h1>
+        <h1>Illuminez<br>votre<br>curiosité</h1>
         <div class="bloc-content">
           <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
@@ -25,7 +25,7 @@
     <div class="carouselContainer">
       <FishCarousel class="fishCarousel"></FishCarousel>
       <a href="" class="button seeMoreButton">{{ $t('seeMore') }}</a>
-      <p>Retrouvez votre poisson personnalisé lors de l’exposition</p>
+      <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
     </div>
   </div>
 
@@ -285,8 +285,21 @@ body{
   color: #02295F;
   position: relative;
   width: 20%;
-  top: -20%;
+  top: -29%;
   right: -72%;
+}
+
+.seeMoreDescription{
+  position: relative;
+  width: 44%;
+  bottom: 20%;
+  margin-right: 19%;
+  margin-left: auto;
+  font-family: 'Red Hat Display';
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
+  text-decoration: none;
 }
 
 .half-width{
