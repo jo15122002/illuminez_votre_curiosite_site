@@ -1,8 +1,8 @@
 <template>
     <div class="carousel">
         <FishCarouselLine :reverse="false"/>
-        <FishCarouselLine :reverse="false"/>
-        <FishCarouselLine :reverse="false"/>
+        <FishCarouselLine :reverse="false" class="no-mobile"/>
+        <FishCarouselLine :reverse="false" class="no-mobile"/>
     </div>
 </template>
 
@@ -25,5 +25,11 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    @media (max-width: 1200px){
+      .no-mobile {
+        display: none;
+      }
     }
 </style>

@@ -65,7 +65,7 @@
         <div class="bloc-content">
           <p class="adress">3 Esplanade Augustin Aussedat<br>Cran-Gevrier, 74960<br>France</p>
           <div class="flex-row buttons-container">
-            <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }}</a>
+            <a href="https://goo.gl/maps/VRY1Uza9vnY1Nr5b6" class="button buyButton">{{ $t('findUs.button.exhibition') }}</a>
           </div>
         </div>
       </div>
@@ -392,5 +392,36 @@ body{
   line-height: 22px;
   margin-top: 2%;
   color: #02295F;
+}
+</style>
+
+<style>
+
+@media (max-width: 1200px){
+  .no-mobile {
+    display: none;
+  }
+
+  .navbar-items-container{
+    flex-direction: column  ;
+  }
+  .navbar{
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+
+  .bloc-content{
+    flex-direction: column;
+  }
+  
+  .content-div{
+    flex-direction: column;
+  }
+
+  .discoverCardContainer{
+    flex-direction: column;
+  }
+
 }
 </style>
