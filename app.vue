@@ -23,7 +23,9 @@
       </div>
     </div>
     <div class="carouselContainer">
-      <FishCarousel class="fishCarousel"/>
+      <FishCarousel class="fishCarousel"></FishCarousel>
+      <a href="" class="button seeMoreButton">{{ $t('seeMore') }}</a>
+      <p>Retrouvez votre poisson personnalisé lors de l’exposition</p>
     </div>
   </div>
 
@@ -47,9 +49,9 @@
     </div>
     </div>
     <div class="discoverCardContainer flex-row">
-      <DiscoverCard/>
-      <DiscoverCard/>
-      <DiscoverCard/>
+      <DiscoverCard :title="title1" :description="description1"/>
+      <DiscoverCard :title="title2" :description="description2"/>
+      <DiscoverCard :title="title3" :description="description3"/>
     </div>
 
     <section>
@@ -82,6 +84,16 @@
 <script setup>
 import { ref } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
+
+const title1 = "La réaction chimique"
+const description1 = "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques."
+
+const title2 = "Les usages"
+const description2 = "À quoi sert cette bioluminescence ? Sous l'océan, chaque être vivant l’utilise pour une raison bien précise : se reproduire, chasser, se camoufler ou se protéger par exemple."
+
+const title3 = "L’écosystème"
+const description3 = "Tous ces êtres vivants cohabitent ensemble dans l’océan, ils se chassent, se reproduisent et nagent ensemble. C’est ce qu’on appelle un écosystème."
+
 
 const videoRef = ref(null)
 
@@ -266,6 +278,15 @@ body{
 .videoButton{
   background-color: #C5E2A6;
   color: #02295F;
+}
+
+.seeMoreButton{
+  background-color: #3AA098;
+  color: #02295F;
+  position: relative;
+  width: 20%;
+  top: -20%;
+  right: -72%;
 }
 
 .half-width{
