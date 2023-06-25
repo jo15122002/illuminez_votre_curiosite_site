@@ -20,7 +20,7 @@
                                 <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
                             </div>
                             <div class="timeOfDaySelection flex-row">
-                                <p @click="selectTimeOfDay" class="morning">Matinée</p>
+                                <p @click="selectTimeOfDay" class="morning timeOfDaySelected">Matinée</p>
                                 <p @click="selectTimeOfDay" class="afternoon">Après-midi</p>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                 </thead>
                                 <tbody>
                                     <tr v-for="time in uniqueTimes" :key="time" class="hourContainer">
-                                        <td class="hour" v-for="date in uniqueDates">{{ time }}</td>
+                                        <td class="hour" :class="getRandomAvailability()" v-for="date in uniqueDates">{{ time }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -140,6 +140,16 @@ const selectTimeOfDay = (e) => {
     } else {
         firstHourOfTimeOfDay.value = 14;
         lastHourOfTimeOfDay.value = 16;
+    }
+};
+
+const getRandomAvailability = () => {
+    const random = Math.random();
+    console.log(random)
+    if(random < 0.75) {
+        return 'isAvailable';
+    } else {
+        return 'isNotAvailable';
     }
 };
 
@@ -344,6 +354,14 @@ watchEffect(() => {
 .timeOfDaySelected{
     background-color: #3aa098 !important;
     color: white;
+}
+
+.isAvailable{
+    background-color: white !important;
+}
+
+.isNotAvailable{
+    background-color: rgba(255, 255, 255, 0.3) !important;
 }
 </style>
 
