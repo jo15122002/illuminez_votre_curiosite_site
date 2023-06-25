@@ -43,7 +43,7 @@ Consultez la documentation de déploiement pour plus d'informations.
 
 Les principaux contributeurs au projet sont :
 
-- jo15122002 (Joyce)
-- Roxane-gll【12†source】.
+- jo15122002
+- Roxane-gll
 
 ---
