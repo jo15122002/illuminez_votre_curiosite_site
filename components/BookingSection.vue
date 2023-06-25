@@ -128,7 +128,6 @@ const generateDates = (dayFrom, dayTo) => {
 
 const selectTimeOfDay = (e) => {
     const target = e.target;
-    console.log(target)
     const timeOfDay = target.classList.contains('morning') ? 'morning' : 'afternoon';
     target.classList.toggle('timeOfDaySelected');
     const otherTimeOfDay = target.classList.contains('morning') ? 'afternoon' : 'morning';
@@ -145,7 +144,6 @@ const selectTimeOfDay = (e) => {
 
 const getRandomAvailability = () => {
     const random = Math.random();
-    console.log(random)
     if(random < 0.75) {
         return 'isAvailable';
     } else {
