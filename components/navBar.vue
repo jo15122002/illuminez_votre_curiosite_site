@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar">
+  <div class="navbar" :style="windowFull? '' : 'display:none'">
     <img src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
       <a href="/" class="navbar-item">{{ $t('navbar.book') }}</a>
@@ -7,11 +7,34 @@
       <a href="/" class="navbar-item">{{ $t('navbar.contact') }}</a>
     </div>
   </div>
+  <div class="small" @click="openMenu">
+    <img src="~/assets/images/menu.png" alt="logo">
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'NavbarCustom'
+    name: 'NavbarCustom',
+    data() {
+        return {
+            windowFull: true
+        }
+    },
+    mounted() {
+        this.onResize()
+        window.addEventListener('resize', this.onResize)
+    },
+    methods: {
+        openMenu() {
+            const doc = document.getElementsByClassName('navbar')[0]
+            doc.style.display = doc.style.display === 'none' ? 'flex' : 'none'
+            const small = document.getElementsByClassName('small')[0]
+            small.style['background-color'] = doc.style.display === 'none' ? '#C5E2A6' : 'transparent'
+        },
+        onResize() {
+            this.windowFull = window.innerWidth > 1250
+        }
+    }
 }
 </script>
 
@@ -48,5 +71,36 @@ export default {
   font-weight: 600;
   font-size: 28px;
   line-height: 37px;
+}
+
+.small{
+    background-color: #C5E2A6;
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    border-radius: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1250px){
+  .navbar-items-container{
+    flex-direction: column  ;
+  }
+  .navbar{
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    display: none;
+  }
+
+  .small {
+    display: flex;
+  }
 }
 </style>

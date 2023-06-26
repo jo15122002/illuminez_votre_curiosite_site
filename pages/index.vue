@@ -405,15 +405,6 @@ body{
     display: none;
   }
 
-  .navbar-items-container{
-    flex-direction: column  ;
-  }
-  .navbar{
-    flex-direction: column;
-    height: auto;
-    width: 90%;
-  }
-
   .bloc-content{
     flex-direction: column;
   }
@@ -424,6 +415,17 @@ body{
 
   .discoverCardContainer{
     flex-direction: column;
+  }
+
+  .navbar{
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    display: none;
+    height: 15vh;
+    justify-content: center;
   }
 
 }
