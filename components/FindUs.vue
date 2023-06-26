@@ -45,7 +45,7 @@ export default {
     font-size: 10.8vw !important;
     font-family: 'Basteleur';
     font-weight: 700;
-    line-height: 50px !important;
+    line-height: 100% !important;
     align-self: center;
   }
 
