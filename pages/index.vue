@@ -299,7 +299,7 @@ body{
 }
 
 .content-div h1{
-  font-family: "Basteleur";
+  font-family: "BasteleurBold";
   font-style: normal;
   font-size: 90px;
   line-height: 112px;
