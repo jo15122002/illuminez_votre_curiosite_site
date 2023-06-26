@@ -106,15 +106,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-
-@font-face {
-  font-family: 'Basteleur';
-  src: url('/Basteleur-Bold.ttf');
-  src: url('/Basteleur-Bold.woff');
-  src: url('/Basteleur-Bold.woff2');
-  
-}
-
 .full-screen-section {
     display: flex;
     justify-content: center;

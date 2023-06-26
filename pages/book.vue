@@ -94,9 +94,15 @@ export default {
     border-radius: 20px;
     text-align: center;
     margin-left: 2vw;
+    font-family: 'Red Hat Display';
+    font-weight: 600;
 }
 
 .selected {
     background-color: #3AA098;
+}
+
+.find {
+    margin-bottom: 5vh;
 }
 </style>

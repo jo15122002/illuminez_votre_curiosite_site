@@ -2,7 +2,7 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <img :src="items[i] ? items[i].data : ``" style="width:300px">
+        <img :src="items[i] ? items[i].data : '_nuxt/assets/exemples/'+randomIntFromInterval+'.png'" style="width:300px">
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3">
@@ -33,6 +33,11 @@ export default {
   },
   components: {
     FishCarouselLineElement,
+  },
+  computed: {
+    randomIntFromInterval() {
+      return Math.floor(Math.random() * (6 - 1 + 1) + 1)
+    }
   },
   mounted() {
     const imgArrConst = gsap.utils.toArray(".image-div"+this.carousel+" .imgC")
