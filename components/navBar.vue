@@ -5,13 +5,24 @@
       <a href="#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
       <a href="#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
       <a href="#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
+      <div class="navbar-item" @click="toggleLang">FR / EN</div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-    name: 'NavbarCustom'
+    name: 'NavbarCustom',
+    methods: {
+    toggleLang() {
+      console.log('toggleLang');
+      if (this.$i18n.locale === 'fr') {
+        this.$i18n.locale = 'en';
+      } else {
+        this.$i18n.locale = 'fr';
+      }
+    },
+  },
 }
 </script>
 
