@@ -6,7 +6,7 @@
             <div class="bloc-content">
             <p>3 Esplanade Augustin Aussedat<br>Cran-Gevrier, 74960<br>France</p>
             <div class="flex-row buttons-container">
-                <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }} <div class="arrowsvg backWhite"></div></a>
+                <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }} &nbsp; <div class="arrowsvg backWhite"></div></a>
             </div>
             </div>
         </div>

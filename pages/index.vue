@@ -10,7 +10,7 @@
           <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
             <a href="#buySection" class="button buyButton">{{ $t('description.button.book') }}</a>
-            <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} <div class="arrowsvg backBlue"></div></a>
+            <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} &nbsp; <div class="arrowsvg backBlue"></div></a>
           </div>
         </div>
       </div>
