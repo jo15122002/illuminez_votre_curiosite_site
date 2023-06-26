@@ -141,5 +141,14 @@ img {
   .seeMore {
     width: 50vw;
   }
+
+  .seeMoreButton {
+    font-size: 1rem;
+  }
+
+  .seeMoreDescription {
+    font-size: 1rem;
+    width: 80%;
+  }
 }
 </style>

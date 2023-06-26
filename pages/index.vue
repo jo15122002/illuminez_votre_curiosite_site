@@ -13,10 +13,10 @@
             <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} &nbsp; <div class="arrowsvg backBlue"></div></a>
           </div>
         </div>
+        <div class="carouselContainer">
+          <FishCarousel class="fishCarousel"></FishCarousel>
+        </div>
       </div>
-    </div>
-    <div class="carouselContainer">
-      <FishCarousel class="fishCarousel"></FishCarousel>
     </div>
   </div>
 
@@ -107,6 +107,14 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
+@font-face {
+  font-family: 'Basteleur';
+  src: url('/Basteleur-Bold.ttf');
+  src: url('/Basteleur-Bold.woff');
+  src: url('/Basteleur-Bold.woff2');
+  
+}
+
 .full-screen-section {
     display: flex;
     justify-content: center;
@@ -179,6 +187,9 @@ body{
 .carouselContainer{
   width: 54.5%;
   height: 100.5vh;
+  position: absolute;
+  top: 20vh;
+  right: 3vw;
 }
 
 .description{
@@ -206,17 +217,6 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.navbar-item{
-  padding-left: 3.3vw;
-  padding-right: 3.3vw;
-  color: #02295F;
-  text-decoration: none;
-  font-family: 'Red Hat Display';
-  font-weight: 600;
-  font-size: 28px;
-  line-height: 37px;
 }
 
 .flex-column{
@@ -405,6 +405,7 @@ body{
 @media screen and (max-width: 1250px) {
   .description-container{
     width: 90vw;
+    height: max-content;
   }
   .description {
     width: 90vw;
@@ -417,6 +418,8 @@ body{
   .carouselContainer {
     width: 90vw;
     height: 310px;
+    position: relative;
+    top: 5vh;
   }
 }
 </style>
@@ -434,6 +437,7 @@ body{
   
   .content-div{
     flex-direction: column;
+    height: max-content;
   }
 
   .discoverCardContainer{
@@ -450,6 +454,12 @@ body{
     height: 15vh;
     justify-content: center;
   }
+  .content-div h1 {
+    font-size: 3rem;
+  }
 
+  #discover {
+    margin-bottom: 2vh;
+  }
 }
 </style>

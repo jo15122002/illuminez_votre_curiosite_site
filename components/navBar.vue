@@ -92,11 +92,13 @@ export default {
     display: none;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 
 @media (max-width: 1250px){
   .navbar-items-container{
-    flex-direction: column  ;
+    flex-direction: column;
+    font-size: 2rem;
   }
   .navbar{
     flex-direction: column;
@@ -105,6 +107,12 @@ export default {
     position: absolute;
     left: 0%;
     display: none;
+    z-index: 2;
+    top: 0;
+  }
+
+  .navbar-item {
+    font-size: 1rem;
   }
 
   .small {

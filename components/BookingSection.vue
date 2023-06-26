@@ -406,7 +406,7 @@ watchEffect(() => {
     width: 100vw;
     margin-right: 0;
     margin-left: 0;
-    height: 150vh;
+    height: 200vh;
   }
   .afternoon {
     width: 50%;
@@ -425,9 +425,14 @@ watchEffect(() => {
   }
 
   .bg-calamar-img {
-    top: -55vh;
+    top: -50%;
     left: -20vw;
     width: 80%;
+    height: 100%;
+  }
+
+  .selected-date-range {
+    font-size: 1.5rem;
   }
 }
 </style>
