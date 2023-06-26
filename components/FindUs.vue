@@ -1,7 +1,7 @@
 <template>
     <div class="findUs">
         <img src="~/assets/images/damier.png" alt="">
-        <div class="description">
+        <div class="adress">
             <h1>{{ $t('findUs.title') }}</h1>
             <div class="bloc-content">
             <p>3 Esplanade Augustin Aussedat<br>Cran-Gevrier, 74960<br>France</p>
@@ -19,23 +19,63 @@ export default {
 }
 </script>
 
-<style>
-.findUs {
+<style scoped>
+
+@media screen and (max-width: 1250px) {
+  .findUs{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin:0px;
+  }
+
+  .findUs img{
+    width: 100%;
+  }
+
+  .adress{
     display: flex;
-    justify-content: space-between;
-    width: 92vw;
-    margin-left: 5%;
+    flex-direction: column;
+    width: 77.7%;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .adress h1{
+    font-size: 10.8vw !important;
+    font-family: 'Basteleur';
+    font-weight: 700;
+    line-height: 50px !important;
+    align-self: center;
+  }
+
+  .bloc-content{
+    width: 100%;
+    align-self: center;
+  }
+
+  .button{
+    font-size: 110%;
+    width: 78.78%;
+    border-radius: 37px;
+  }
 }
 
-.description{
+.findUs {
+  display: flex;
+  justify-content: space-between;
+  width: 92vw;
+  margin-left: 5%;
+}
+
+.adress{
   margin-top: auto;
   margin-bottom: auto;
   margin: auto;
   margin-left: 5%;
-  
 }
 
-.description h1{
+.adress h1{
   font-family: 'Basteleur';
   font-style: normal;
   color: #02295F;

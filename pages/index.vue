@@ -51,7 +51,7 @@
       <BookingSection id="buySection"></BookingSection>
     </section>
 
-    <div class="findUs flex-row">
+    <div class="findUsContainer flex-row">
       <FindUs></FindUs>
     </div>
 
@@ -345,7 +345,7 @@ body{
   margin: auto;
 }
 
-.findUs{
+.findUsContainer{
   justify-content: space-around;
   margin-bottom: 5%;
 }
