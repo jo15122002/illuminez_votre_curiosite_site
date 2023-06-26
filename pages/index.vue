@@ -362,6 +362,10 @@ body{
   padding-bottom: 2%;
 }
 
+.footer .navbar-item{
+  color: white !important;
+}
+
 .copyright{
   font-family: "Montserrat";
   font-style: normal;
