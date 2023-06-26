@@ -300,7 +300,7 @@ watchEffect(() => {
 
 .hour{
     background-color: white;
-    border-radius: 10%;
+    border-radius: 20% / 30%;
     height: 55px;
     font-size: 14px;
     margin-top: 14%;
@@ -433,6 +433,10 @@ watchEffect(() => {
 
   .selected-date-range {
     font-size: 1.5rem;
+  }
+
+  .hour{
+    border-radius: 10% / 30%;
   }
 }
 </style>

@@ -91,6 +91,10 @@ export default {
     display: flex;
     flex-direction: column;
   }
+
+  .button{
+    width: 20%;
+  }
 }
 .arrowsvg{
         height: 24px;

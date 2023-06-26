@@ -432,7 +432,7 @@ body{
 
 <style>
 
-@media (max-width: 1250px){
+@media (max-width: 1440px){
   .no-mobile {
     display: none;
   }
