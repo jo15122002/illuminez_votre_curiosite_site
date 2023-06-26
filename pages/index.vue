@@ -2,10 +2,10 @@
   <NavbarCustom></NavbarCustom>
 
   <div class="flex-row content-div">
-    <div class="flex-column half-width description-container">
+    <div class="flex-column description-container">
       <div class="description">
         <h4 class="date">&nbsp;{{ $t('description.date') }}</h4>
-        <h1>{{ $t('description.title') }}</h1>
+        <h1>Illuminez<br>votre<br>curiosité</h1>
         <div class="bloc-content">
           <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
@@ -16,7 +16,9 @@
       </div>
     </div>
     <div class="carouselContainer">
-      <FishCarousel class="fishCarousel"/>
+      <FishCarousel class="fishCarousel"></FishCarousel>
+      <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
+      <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
     </div>
   </div>
 
@@ -40,9 +42,9 @@
     </div>
     </div>
     <div class="discoverCardContainer flex-row">
-      <DiscoverCard/>
-      <DiscoverCard/>
-      <DiscoverCard/>
+      <DiscoverCard :title="title1" :description="description1"/>
+      <DiscoverCard :title="title2" :description="description2"/>
+      <DiscoverCard :title="title3" :description="description3"/>
     </div>
 
     <section>
@@ -60,6 +62,16 @@
 import { ref } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
 
+const title1 = "La réaction chimique"
+const description1 = "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques."
+
+const title2 = "Les usages"
+const description2 = "À quoi sert cette bioluminescence ? Sous l'océan, chaque être vivant l’utilise pour une raison bien précise : se reproduire, chasser, se camoufler ou se protéger par exemple."
+
+const title3 = "L’écosystème"
+const description3 = "Tous ces êtres vivants cohabitent ensemble dans l’océan, ils se chassent, se reproduisent et nagent ensemble. C’est ce qu’on appelle un écosystème."
+
+
 const videoRef = ref(null)
 
 const isVisible = useElementVisibility(videoRef, {
@@ -73,22 +85,22 @@ watch(isVisible, (newVisibility) => {
     videoRef.value.currentTime = 0;
     videoRef.value.pause();
   }
-})
+});
 </script>
 
 <script>
-import NavbarCustom from '@/components/navBar.vue'
-import FindUs from '@/components/FindUs.vue'
 import Footer from '@/components/Footer.vue'
+import FindUs from '@/components/FindUs.vue'
+import NavbarCustom from '@/components/navBar.vue'
 export default {
-  components: { NavbarCustom, FindUs, Footer },
+  computed: { NavbarCustom, FindUs, Footer },
   methods: {
     toggleMute() {
       const video = this.$refs.videoRef;
       video.muted = !video.muted;
     },
   },
-}
+};
 </script>
 
 <style>
@@ -148,6 +160,8 @@ body{
   padding-top: 2.5%;
   width: 90vw;
   color: #02295F;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bloc-content{
@@ -186,6 +200,7 @@ body{
 .description-container{
   display: flex;
   height: 100vh;
+  width: 40vw;
 }
 
 .navbar-items-container{
@@ -247,6 +262,31 @@ body{
 .videoButton{
   background-color: #C5E2A6;
   color: #02295F;
+}
+
+.seeMoreButton{
+  background-color: #3AA098;
+  color: #02295F;
+  position: relative;
+  width: 20%;
+  top: -29%;
+  right: -72%;
+}
+
+.seeMoreDescription{
+  position: relative;
+  width: 44%;
+  bottom: 20%;
+  margin-right: 19%;
+  margin-left: auto;
+  font-family: 'Red Hat Display';
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
+  text-decoration: none;
+  background-color: #F0F0F0;
+  border-radius: 20px;
+  padding: 2vh;
 }
 
 .half-width{
@@ -329,5 +369,64 @@ body{
   font-size: 18px;
   line-height: 22px;
   margin-top: 6%;
+}
+
+.adress{
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 2%;
+  color: #02295F;
+}
+
+@media screen and (max-width: 1250px) {
+  .description-container{
+    width: 90vw;
+  }
+  .description {
+    width: 90vw;
+  }
+
+  .bloc-content {
+    width: 90vw;
+  }
+
+  .carouselContainer {
+    width: 90vw;
+    height: 310px;
+  }
+}
+</style>
+
+<style>
+
+@media (max-width: 1200px){
+  .no-mobile {
+    display: none;
+  }
+
+  .navbar-items-container{
+    flex-direction: column  ;
+  }
+  .navbar{
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+
+  .bloc-content{
+    flex-direction: column;
+  }
+  
+  .content-div{
+    flex-direction: column;
+  }
+
+  .discoverCardContainer{
+    flex-direction: column;
+  }
+
 }
 </style>

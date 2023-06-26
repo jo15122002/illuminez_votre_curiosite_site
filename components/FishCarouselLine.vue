@@ -1,8 +1,14 @@
 <template>
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
-          <img :data-index="i" :src="items[i] ? items[i].data : ``" style='width: 300px' alt="">
+      <div :data-index="i" class="imgC">
+        <img :src="items[i] ? items[i].data : ``" style="width:300px">
       </div>
+      <div class="seeMore" v-if="carousel === 3">
+        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
+        <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -29,7 +35,7 @@ export default {
     FishCarouselLineElement,
   },
   mounted() {
-    const imgArrConst = gsap.utils.toArray(".image-div"+this.carousel+" img")
+    const imgArrConst = gsap.utils.toArray(".image-div"+this.carousel+" .imgC")
 
     gsap.set(imgArrConst, {left: 0})
 
@@ -68,11 +74,11 @@ export default {
           let maxLeftTravel = -imgWidths[imgIndex]
 
           //figuring out what is it's maxrightposition so i can wrap it         
-          let rightPositioning = (300 * 5) + maxLeftTravel
+          let rightPositioning = (310 * 5) + maxLeftTravel
           //wrapping 
           var mod = gsap.utils.wrap(maxLeftTravel, rightPositioning)
-                offset += additionalX.val                   
-                return `${mod(parseFloat(x) + offset) }px`
+          offset += additionalX.val       
+          return `${mod(parseFloat(x) + offset) }px`
         } 
       }
     })
@@ -87,14 +93,21 @@ export default {
   height: 30%;
 }
 
-img {
-  padding: 0vw;
-  position: absolute
-}
-
 .image-div {
   width: 300px;
   position: absolute;
   left: 0;
+}
+
+.imgC {
+  width: 310px;
+  height: 310px;
+  position: absolute;
+  
+}
+
+img {
+  border: #F0F0F0 2px solid;
+  border-radius: 20px;
 }
 </style>

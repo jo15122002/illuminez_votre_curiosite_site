@@ -32,7 +32,7 @@ export default {
 .imgFish {
     height: 300px;
     border-radius: 20px;
-    border: #F0F0F0 1px solid;
+    border: #F0F0F0 2px solid;
 }
 
 .fishName {
