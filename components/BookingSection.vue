@@ -370,7 +370,7 @@ watchEffect(() => {
     background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .select-date {
     width: 100%;
   }

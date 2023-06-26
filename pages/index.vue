@@ -393,7 +393,7 @@ body{
   background-color: #02295F;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .description-container{
     width: 90vw;
     height: max-content;

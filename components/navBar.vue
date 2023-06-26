@@ -95,7 +95,7 @@ export default {
     z-index: 2;
 }
 
-@media (max-width: 1250px){
+@media (max-width: 1440px){
   .navbar-items-container{
     flex-direction: column;
     font-size: 2rem;
