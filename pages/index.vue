@@ -17,8 +17,6 @@
     </div>
     <div class="carouselContainer">
       <FishCarousel class="fishCarousel"></FishCarousel>
-      <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
-      <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
     </div>
   </div>
 
@@ -180,7 +178,7 @@ body{
 
 .carouselContainer{
   width: 54.5%;
-  height: 100vh;
+  height: 100.5vh;
 }
 
 .description{
@@ -268,7 +266,7 @@ body{
   background-color: #3AA098;
   color: #02295F;
   position: relative;
-  width: 20%;
+  width: 10vw;
   top: -29%;
   right: -72%;
 }

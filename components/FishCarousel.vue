@@ -1,8 +1,8 @@
 <template>
     <div class="carousel">
-        <FishCarouselLine :reverse="false" :items="linesItems[1]" :carousel="1"/>
+        <FishCarouselLine :reverse="false" :items="linesItems[1]" :carousel="1" v-if="windowFull"/>
         <FishCarouselLine :reverse="true" :items="linesItems[2]" :carousel="2" v-if="windowFull" />
-        <FishCarouselLine :reverse="false" :items="linesItems[3]" :carousel="3" v-if="windowFull" />
+        <FishCarouselLine :reverse="false" :items="linesItems[3]" :carousel="3"/>
     </div>
 </template>
 
@@ -68,12 +68,12 @@ export default {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
-    @media (max-width: 1200px){
-      .no-mobile {
-        display: none;
+    @media (max-width: 1250px){
+      .carousel {
+        justify-content: space-between;
       }
     }
 </style>

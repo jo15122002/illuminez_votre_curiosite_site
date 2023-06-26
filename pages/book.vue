@@ -79,7 +79,6 @@ export default {
     margin-top: 5%;
 }
 
-
 .pages {
     margin: auto;
     width: 91.7vw;
@@ -94,7 +93,7 @@ export default {
     border: #3AA098 1px solid;
     border-radius: 20px;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 2vw;
 }
 
 .selected {

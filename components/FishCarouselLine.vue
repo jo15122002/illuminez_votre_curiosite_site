@@ -4,11 +4,11 @@
       <div :data-index="i" class="imgC">
         <img :src="items[i] ? items[i].data : ``" style="width:300px">
       </div>
-      <div class="seeMore" v-if="carousel === 3">
+    </div>
+    <div class="seeMore" v-if="carousel === 3">
         <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
         <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
       </div>
-    </div>
   </div>
 </template>
 
@@ -74,7 +74,7 @@ export default {
           let maxLeftTravel = -imgWidths[imgIndex]
 
           //figuring out what is it's maxrightposition so i can wrap it         
-          let rightPositioning = (310 * 5) + maxLeftTravel
+          let rightPositioning = (330 * 5) + maxLeftTravel
           //wrapping 
           var mod = gsap.utils.wrap(maxLeftTravel, rightPositioning)
           offset += additionalX.val       
@@ -100,8 +100,8 @@ export default {
 }
 
 .imgC {
-  width: 310px;
-  height: 310px;
+  width: 330px;
+  height: 300px;
   position: absolute;
   
 }
@@ -109,5 +109,31 @@ export default {
 img {
   border: #F0F0F0 2px solid;
   border-radius: 20px;
+}
+
+.seeMore {
+  height: 302px;
+  width: 450px;
+  background-color: #F0F0F0;
+  position: absolute;
+  right: 0;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: flex-end;
+}
+
+.button {
+  position: relative;
+  right: 1vw;
+  top: 2vh;
+}
+
+.seeMoreDescription {
+  background-color: transparent;
+  margin: 0;
+  bottom: -7vw;
+  width: 90%;
 }
 </style>
