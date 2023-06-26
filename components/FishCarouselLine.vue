@@ -136,4 +136,10 @@ img {
   bottom: -7vw;
   width: 90%;
 }
+
+@media (max-width: 1250px){
+  .seeMore {
+    width: 50vw;
+  }
+}
 </style>
