@@ -16,6 +16,8 @@
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
     "@vueuse/components": "^10.1.2",
+    "firebase": "^9.23.0",
+    "firebase-admin": "^11.9.0",
     "gsap": "^3.12.0"
   }
 }
