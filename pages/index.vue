@@ -400,7 +400,7 @@ body{
 
 <style>
 
-@media (max-width: 1200px){
+@media (max-width: 1250px){
   .no-mobile {
     display: none;
   }
@@ -411,7 +411,7 @@ body{
   .navbar{
     flex-direction: column;
     height: auto;
-    width: auto;
+    width: 90%;
   }
 
   .bloc-content{

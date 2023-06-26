@@ -13,11 +13,13 @@
                         <input class="input" :placeholder="$t('infoForm.inputs.number')" type="number">
                     </div>
                     <div class="select-date">
-                        <div class="select-date-controls flex-row">
-                            <h1 class="selected-date-range">{{ $t(firstDayOfWeek.toLocaleString('default', { month: 'long' }).substring(0,1).toUpperCase() + firstDayOfWeek.toLocaleString('default', { month: 'long' }).substring(1)) }} {{ firstDayOfWeek.getDate() }} - {{ $t(lastDayOfWeek.toLocaleString('default', { month: 'long' }).substring(0,1).toUpperCase() + lastDayOfWeek.toLocaleString('default', { month: 'long' }).substring(1)) }} {{ lastDayOfWeek.getDate() }}</h1>
-                            <div class="flex-row controls-container">
-                                <p @click="goPreviousWeek" class="weekSelectionButton previousWeekSelectionButton">&lt;</p>
-                                <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
+                        <div class="select-date-controls">
+                            <div class="flex-row daySelect">
+                                <h1 class="selected-date-range">{{ $t(firstDayOfWeek.toLocaleString('default', { month: 'long' }).substring(0,1).toUpperCase() + firstDayOfWeek.toLocaleString('default', { month: 'long' }).substring(1)) }} {{ firstDayOfWeek.getDate() }} - {{ $t(lastDayOfWeek.toLocaleString('default', { month: 'long' }).substring(0,1).toUpperCase() + lastDayOfWeek.toLocaleString('default', { month: 'long' }).substring(1)) }} {{ lastDayOfWeek.getDate() }}</h1>
+                                <div class="flex-row controls-container">
+                                    <p @click="goPreviousWeek" class="weekSelectionButton previousWeekSelectionButton">&lt;</p>
+                                    <p @click="goNextWeek" class="weekSelectionButton nextWeekSelectionButton">></p>
+                                </div>
                             </div>
                             <div class="timeOfDaySelection flex-row">
                                 <p @click="selectTimeOfDay" class="morning timeOfDaySelected" :class="{ timeOfDaySelected: timeOfDay === 'morning' }">{{ $t('reservation.timeOfDaySelection.morning') }}</p>
@@ -28,7 +30,7 @@
                             <table>
                                 <thead>
                                     <tr>
-                                        <th v-for="date in uniqueDates" class="dateContainer">
+                                        <th v-for="date in uniqueDates" class="dateContainer" :key="date">
                                             <p class="weekDay">{{ $t(date.day.substr(0, 3)) }}</p>
                                             <p class="date">{{ date.day.substr(4) }}</p>
                                         </th>
@@ -36,7 +38,7 @@
                                 </thead>
                                 <tbody>
                                     <tr v-for="time in uniqueTimes" :key="time" class="hourContainer">
-                                        <td class="hour" :class="getRandomAvailability()" v-for="date in uniqueDates">{{ time }}</td>
+                                        <td class="hour" :class="getRandomAvailability()" v-for="date in uniqueDates" :key="date">{{ time }}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -50,6 +52,11 @@
 <script setup>
 import { ref, onMounted, watchEffect } from 'vue';
 
+let number = 7
+if (process.client) {
+    number = window.innerHeight > 1250 ? 7 : 3 
+}
+
 const uniqueDates = ref([]);
 const uniqueTimes = ref([]);
 
@@ -62,33 +69,33 @@ const lastHourOfTimeOfDay = ref(11.5);
 
 function getFirstDayOfWeek(date) {
   const dayOfWeek = date.getDay();
-  const diff = date.getDate() - dayOfWeek + (dayOfWeek === 0 ? -6 : 1);
+  const diff = date.getDate() - dayOfWeek + (dayOfWeek === 0 ? -number : 1);
   return new Date(date.setDate(diff));
 }
 
 function getLastDayOfWeek(date) {
   const dayOfWeek = date.getDay();
-  const diff = date.getDate() - dayOfWeek + 7;
+  const diff = date.getDate() - dayOfWeek + number;
   return new Date(date.setDate(diff));
 }
 
 function goPreviousWeek() {
     const prevFirstDay = new Date(firstDayOfWeek.value);
-    prevFirstDay.setDate(prevFirstDay.getDate() - 7);
+    prevFirstDay.setDate(prevFirstDay.getDate() - number);
     firstDayOfWeek.value = prevFirstDay;
 
     const prevLastDay = new Date(lastDayOfWeek.value);
-    prevLastDay.setDate(prevLastDay.getDate() - 7);
+    prevLastDay.setDate(prevLastDay.getDate() - number);
     lastDayOfWeek.value = prevLastDay;
 }
 
 function goNextWeek() {
     const nextFirstDay = new Date(firstDayOfWeek.value);
-    nextFirstDay.setDate(nextFirstDay.getDate() + 7);
+    nextFirstDay.setDate(nextFirstDay.getDate() + number);
     firstDayOfWeek.value = nextFirstDay;
 
     const nextLastDay = new Date(lastDayOfWeek.value);
-    nextLastDay.setDate(nextLastDay.getDate() + 7);
+    nextLastDay.setDate(nextLastDay.getDate() + number);
     lastDayOfWeek.value = nextLastDay;
 }
 
@@ -360,6 +367,66 @@ watchEffect(() => {
 
 .isNotAvailable{
     background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+@media screen and (max-width: 1250px) {
+  .select-date {
+    width: 100%;
+  }
+  .row {
+    width: 70%;
+    justify-content: center;
+  }
+  .info-form {
+    align-items: center;
+  }
+
+  .reservation-form{
+    margin: 0;
+    width: 90%;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .select-date-controls {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weekSelectionButton {
+    height: 3vh;
+  }
+
+  .bg-calamar-wrapper {
+    width: 100vw;
+    margin-right: 0;
+    margin-left: 0;
+    height: 150vh;
+  }
+  .afternoon {
+    width: 50%;
+  }
+  .morning {
+    width: 50%;
+  }
+
+  .timeOfDaySelection {
+    width: 100%;
+  }
+  .daySelect {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bg-calamar-img {
+    top: -55vh;
+    left: -20vw;
+    width: 80%;
+  }
 }
 </style>
 

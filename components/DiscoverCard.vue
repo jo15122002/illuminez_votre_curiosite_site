@@ -79,4 +79,13 @@ const props = defineProps({
         font-size: 28px;
         line-height: 37px;
     }
+
+@media screen and (max-width: 1250px) {
+  .card {
+    width: auto;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
 </style>
