@@ -2,9 +2,9 @@
   <div class="navbar" :style="windowFull? '' : 'display:none'">
     <img src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
-      <a href="#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
-      <a href="#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
-      <a href="#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
+      <a href="/#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
+      <a href="/#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
+      <a href="/#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
       <div class="navbar-item" @click="toggleLang">FR / EN</div>
     </div>
   </div>
