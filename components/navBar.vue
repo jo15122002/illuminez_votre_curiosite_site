@@ -15,7 +15,6 @@ export default {
     name: 'NavbarCustom',
     methods: {
     toggleLang() {
-      console.log('toggleLang');
       if (this.$i18n.locale === 'fr') {
         this.$i18n.locale = 'en';
       } else {
