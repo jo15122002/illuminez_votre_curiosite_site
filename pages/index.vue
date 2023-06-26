@@ -187,7 +187,7 @@ body{
 }
 
 .description h1{
-  font-family: 'Basteleur';
+  font-family: 'BasteleurBold';
   font-style: normal;
   color: #02295F;
   font-weight: 400;
