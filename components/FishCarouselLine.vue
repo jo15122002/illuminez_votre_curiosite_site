@@ -7,7 +7,7 @@
     </div>
     <div class="seeMore" v-if="carousel === 3">
         <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
-        <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
+        <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
       </div>
   </div>
 </template>
