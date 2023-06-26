@@ -25,7 +25,7 @@
   </div>
 
   <div id="discover" class="flex-row content-div">
-    <div class="flex-column half-width description-container">
+    <div class="flex-column description-container">
       <div class="description">
         <h1>{{ $t('discover.title') }}</h1>
         <div class="bloc-content">
@@ -120,6 +120,7 @@ export default {
   background: url("~/assets/images/meduse.png") no-repeat center center;
   background-position: 80% 130%;
   width:100%;
+  height: 100%;
 }
 
 body{
@@ -201,6 +202,16 @@ body{
   display: flex;
   height: 100vh;
   width: 40vw;
+}
+
+#discover .description-container{
+  width: 100%;
+  background: url("~/assets/images/meduse.png") no-repeat center center;
+  background-position: 80% 130%;
+}
+
+#discover .description-container h1{
+  width: 50%;
 }
 
 .navbar-items-container{
@@ -412,6 +423,10 @@ body{
     position: relative;
     top: 5vh;
   }
+
+  #discover .description-container{
+  background-position: 200% 120%;
+}
 }
 </style>
 
