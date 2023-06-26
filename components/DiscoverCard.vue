@@ -6,7 +6,7 @@
         <br>
         <h1>{{ $t(props.title) }}</h1>
         <p>{{ $t(props.description) }}</p>
-        <a :href=props.buttonRef class="button">{{ $t("seeMore") }}</a>
+        <a :href=props.buttonRef class="button">{{ $t("seeMore") }}<div class="arrowsvg backGreen"></div></a>
     </div>
 </template>
 
@@ -45,6 +45,7 @@ const props = defineProps({
         align-items: center;
         aspect-ratio: 1/1;
     }
+
     h1{
         font-family: 'Red Hat Display';
         font-weight: 700;
@@ -62,7 +63,7 @@ const props = defineProps({
     .button{
         text-decoration: none;
         display: flex;
-        width: 48%;
+        width: 40%;
         height: auto;
         color: #3aa098;
         border-radius: 3.4vw;
@@ -71,12 +72,31 @@ const props = defineProps({
         border: 2px solid #3aa098;
 
         text-align: center;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
         font-family: 'Red Hat Display';
         font-weight: 600;
         font-size: 28px;
         line-height: 37px;
+    }
+
+    .arrowsvg{
+        height: 24px;
+        aspect-ratio: 1/1;
+        -webkit-mask: url("./assets/images/arrow.svg") no-repeat center;
+        mask: url("./assets/images/arrow.svg") no-repeat center;
+    }
+
+    .backWhite{
+        background-color: white;
+    }
+
+    .backGreen{
+        background-color: #3AA098;
+    }
+
+    .backBlue{
+        background-color: #02295F;
     }
 </style>

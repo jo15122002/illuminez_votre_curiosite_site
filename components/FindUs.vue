@@ -4,9 +4,9 @@
         <div class="description">
             <h1>{{ $t('findUs.title') }}</h1>
             <div class="bloc-content">
-            <p>{{ $t('findUs.content') }}</p>
+            <p>3 Esplanade Augustin Aussedat<br>Cran-Gevrier, 74960<br>France</p>
             <div class="flex-row buttons-container">
-                <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }}</a>
+                <a href="#buySection" class="button buyButton">{{ $t('findUs.button.exhibition') }} <div class="arrowsvg backWhite"></div></a>
             </div>
             </div>
         </div>
@@ -32,6 +32,7 @@ export default {
   margin-bottom: auto;
   margin: auto;
   margin-left: 5%;
+  
 }
 
 .description h1{

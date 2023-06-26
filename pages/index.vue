@@ -10,7 +10,7 @@
           <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
             <a href="#buySection" class="button buyButton">{{ $t('description.button.book') }}</a>
-            <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} <div class="arrowsvg backWhite"></div></a>
+            <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} <div class="arrowsvg backBlue"></div></a>
           </div>
         </div>
       </div>
@@ -213,7 +213,7 @@ body{
 .navbar-item{
   padding-left: 3.3vw;
   padding-right: 3.3vw;
-  color: white;
+  color: #02295F;
   text-decoration: none;
   font-family: 'Red Hat Display';
   font-weight: 600;
@@ -238,7 +238,7 @@ body{
   height: auto;
   border-radius: 3.4vw;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding-right: 1.5vw;
   padding-left: 1.5vw;
@@ -431,7 +431,7 @@ body{
 }
 
 .arrowsvg{
-  height: 100%;
+  height: 24px;
   aspect-ratio: 1/1;
   -webkit-mask: url("./assets/images/arrow.svg") no-repeat center;
   mask: url("./assets/images/arrow.svg") no-repeat center;
@@ -443,5 +443,9 @@ body{
 
 .backGreen{
   background-color: #3AA098;
+}
+
+.backBlue{
+  background-color: #02295F;
 }
 </style>

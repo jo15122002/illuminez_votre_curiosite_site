@@ -28,7 +28,7 @@
     "content": "Bioluminescence is a chemical reaction produced by living organisms for various purposes. Offer your children a new way to discover and learn about bioluminescent species by letting them explore an interactive exhibition on their own.",
     "button": {
       "book": "Book",
-      "video": "Exhibition Video ↘"
+      "video": "Exhibition Video"
     }
   },
   "discover": {
@@ -42,7 +42,7 @@
     "title": "Where to Find Us",
     "content": "3 Esplanade Augustin AussedatCran-Gevrier,\n74960\nFrance",
     "button": {
-      "exhibition": "Visit Exhibition ↘"
+      "exhibition": "Visit Exhibition"
     }
   },
   "footer": {
@@ -73,7 +73,7 @@
       "afternoon": "Afternoon"
     }
   },
-  "seeMore": "See more ↘",
+  "seeMore": "See more",
   "La réaction chimique": "The chemical reaction",
   "Les usages": "The uses",
   "L'écosystème": "The ecosystem",

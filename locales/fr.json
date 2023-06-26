@@ -29,7 +29,7 @@
     "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, en les laissant en autonomie lors d’une exposition interactive.",
     "button": {
       "book": "Réserver",
-      "video": "Vidéo de l'exposition ↘"
+      "video": "Vidéo de l'exposition"
     }
   },
   "discover": {
@@ -43,7 +43,7 @@
     "title": "Où nous retrouver ?",
     "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. La bioluminescence est une réaction chimique que produisent.",
     "button": {
-      "exhibition": "Se rendre à l'exposition ↘"
+      "exhibition": "Se rendre à l'exposition"
     }
   },
   "footer": {
@@ -74,7 +74,7 @@
       "number": "Nombre"
     }
   },
-  "seeMore": "Voir plus ↘",
+  "seeMore": "Voir plus",
   "La réaction chimique": "La réaction chimique",
   "Les usages": "Les usages",
   "L'écosystème": "L'écosystème",
