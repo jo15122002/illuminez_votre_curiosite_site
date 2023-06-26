@@ -48,14 +48,14 @@
     </div>
 
     <section>
-      <BookingSection ></BookingSection>
+      <BookingSection id="buySection"></BookingSection>
     </section>
 
     <div class="findUs flex-row">
       <FindUs></FindUs>
     </div>
 
-    <Footer></Footer>
+    <Footer id="footer"></Footer>
 </template>
 
 <script setup>

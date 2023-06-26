@@ -2,9 +2,9 @@
   <div class="navbar">
     <img src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
-      <a href="/" class="navbar-item">{{ $t('navbar.book') }}</a>
-      <a href="/" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
-      <a href="/" class="navbar-item">{{ $t('navbar.contact') }}</a>
+      <a href="#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
+      <a href="#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
+      <a href="#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
     </div>
   </div>
 </template>
