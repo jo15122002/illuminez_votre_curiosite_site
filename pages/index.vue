@@ -10,7 +10,7 @@
           <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
             <a href="#buySection" class="button buyButton">{{ $t('description.button.book') }}</a>
-            <a href="#video" class="button videoButton">{{ $t('description.button.video') }}</a>
+            <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} &nbsp; <div class="arrowsvg backBlue"></div></a>
           </div>
         </div>
       </div>
@@ -46,14 +46,14 @@
     </div>
 
     <section>
-      <BookingSection ></BookingSection>
+      <BookingSection id="buySection"></BookingSection>
     </section>
 
-    <div class="findUs flex-row">
+    <div class="findUsContainer flex-row">
       <FindUs></FindUs>
     </div>
 
-    <Footer></Footer>
+    <Footer id="footer"></Footer>
 </template>
 
 <script setup>
@@ -211,7 +211,7 @@ body{
 .navbar-item{
   padding-left: 3.3vw;
   padding-right: 3.3vw;
-  color: white;
+  color: #02295F;
   text-decoration: none;
   font-family: 'Red Hat Display';
   font-weight: 600;
@@ -236,7 +236,7 @@ body{
   height: auto;
   border-radius: 3.4vw;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   padding-right: 1.5vw;
   padding-left: 1.5vw;
@@ -343,7 +343,7 @@ body{
   margin: auto;
 }
 
-.findUs{
+.findUsContainer{
   justify-content: space-around;
   margin-bottom: 5%;
 }
@@ -358,6 +358,10 @@ body{
   color: white;
   padding-top: 3%;
   padding-bottom: 2%;
+}
+
+.footer .navbar-item{
+  color: white !important;
 }
 
 .copyright{
@@ -377,6 +381,25 @@ body{
   line-height: 22px;
   margin-top: 2%;
   color: #02295F;
+}
+
+.arrowsvg{
+  height: 24px;
+  aspect-ratio: 1/1;
+  -webkit-mask: url("./assets/images/arrow.svg") no-repeat center;
+  mask: url("./assets/images/arrow.svg") no-repeat center;
+}
+
+.backWhite{
+  background-color: white;
+}
+
+.backGreen{
+  background-color: #3AA098;
+}
+
+.backBlue{
+  background-color: #02295F;
 }
 
 @media screen and (max-width: 1250px) {

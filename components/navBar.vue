@@ -2,9 +2,10 @@
   <div class="navbar" :style="windowFull? '' : 'display:none'">
     <img src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
-      <a href="/" class="navbar-item">{{ $t('navbar.book') }}</a>
-      <a href="/" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
-      <a href="/" class="navbar-item">{{ $t('navbar.contact') }}</a>
+      <a href="#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
+      <a href="#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
+      <a href="#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
+      <div class="navbar-item" @click="toggleLang">FR / EN</div>
     </div>
   </div>
   <div class="small" @click="openMenu">
@@ -33,7 +34,14 @@ export default {
         },
         onResize() {
             this.windowFull = window.innerWidth > 1250
-        }
+        },
+        toggleLang() {
+            if (this.$i18n.locale === 'fr') {
+                this.$i18n.locale = 'en';
+            } else {
+                this.$i18n.locale = 'fr';
+            }
+        },
     }
 }
 </script>

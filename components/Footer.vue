@@ -1,9 +1,9 @@
 <template>
   <div class="footer">
       <div class="navbar-items-container">
-        <a href="" class="navbar-item">{{ $t('footer.links.book') }}</a>
-        <a href="" class="navbar-item">{{ $t('footer.links.exhibition') }}</a>
-        <a href="" class="navbar-item">{{ $t('footer.links.contact') }}</a>
+        <a href="#buySection" class="navbar-item">{{ $t('footer.links.book') }}</a>
+        <a href="#video" class="navbar-item">{{ $t('footer.links.exhibition') }}</a>
+        <a href="#footer" class="navbar-item">{{ $t('footer.links.contact') }}</a>
       </div>
       <div class="copyright">&copy;Illuminez votre curiosité 2023</div>
     </div>

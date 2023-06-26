@@ -28,7 +28,7 @@
     "content": "Bioluminescence is a chemical reaction produced by living organisms for various purposes. Offer your children a new way to discover and learn about bioluminescent species by letting them explore an interactive exhibition on their own.",
     "button": {
       "book": "Book",
-      "video": "Exhibition Video ↘"
+      "video": "Exhibition Video"
     }
   },
   "discover": {
@@ -42,7 +42,7 @@
     "title": "Where to Find Us",
     "content": "3 Esplanade Augustin AussedatCran-Gevrier,\n74960\nFrance",
     "button": {
-      "exhibition": "Visit Exhibition ↘"
+      "exhibition": "Visit Exhibition"
     }
   },
   "footer": {
@@ -73,12 +73,13 @@
       "afternoon": "Afternoon"
     }
   },
-  "seeMore": "See more ↘",
+  "seeMore": "See more",
   "La réaction chimique": "The chemical reaction",
   "Les usages": "The uses",
   "L'écosystème": "The ecosystem",
   "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques.": "Have you heard of lanternfish? They are bioluminescent fish, which means they produce their own light through a series of chemical reactions.",
   "À quoi sert cette bioluminescence ? Sous l'océan, chaque être vivant l’utilise pour une raison bien précise : se reproduire, chasser, se camoufler ou se protéger par exemple.": "What is the purpose of this bioluminescence? Under the ocean, every living organism uses it for a specific reason: to reproduce, hunt, camouflage, or protect themselves, for example.",
-  "Tous ces êtres vivants cohabitent ensemble dans l’océan, ils se chassent, se reproduisent et nagent ensemble. C’est ce qu’on appelle un écosystème.": "All these living organisms coexist in the ocean, they hunt, reproduce, and swim together. This is what we call an ecosystem."
+  "Tous ces êtres vivants cohabitent ensemble dans l’océan, ils se chassent, se reproduisent et nagent ensemble. C’est ce qu’on appelle un écosystème.": "All these living organisms coexist in the ocean, they hunt, reproduce, and swim together. This is what we call an ecosystem.",
+  "findYourFish" : "Find the fish you personalized during the exhibition !"
 
 }
