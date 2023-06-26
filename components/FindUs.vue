@@ -43,7 +43,7 @@ export default {
 
   .adress h1{
     font-size: 10.8vw !important;
-    font-family: 'Basteleur';
+    font-family: 'BasteleurBold';
     font-weight: 700;
     line-height: 100% !important;
     align-self: center;
@@ -76,7 +76,7 @@ export default {
 }
 
 .adress h1{
-  font-family: 'Basteleur';
+  font-family: 'BasteleurBold';
   font-style: normal;
   color: #02295F;
   font-weight: 400;
