@@ -24,6 +24,7 @@ export default {
     display: flex;
     justify-content: space-between;
     width: 92vw;
+    margin-left: 5%;
 }
 
 .description{

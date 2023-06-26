@@ -53,15 +53,8 @@
       <FindUs></FindUs>
     </div>
 
-    <div class="footer">
-      <div class="navbar-items-container">
-        <a href="" class="navbar-item">{{ $t('footer.links.book') }}</a>
-        <a href="" class="navbar-item">{{ $t('footer.links.exhibition') }}</a>
-        <a href="" class="navbar-item">{{ $t('footer.links.contact') }}</a>
-      </div>
-      <div class="copyright">&copy;Illuminez votre curiosité 2023</div>
-    </div>
-  </template>
+    <Footer></Footer>
+</template>
 
 <script setup>
 import { ref } from 'vue'
@@ -86,8 +79,9 @@ watch(isVisible, (newVisibility) => {
 <script>
 import NavbarCustom from '@/components/navBar.vue'
 import FindUs from '@/components/FindUs.vue'
+import Footer from '@/components/Footer.vue'
 export default {
-  components: { NavbarCustom, FindUs },
+  components: { NavbarCustom, FindUs, Footer },
   methods: {
     toggleMute() {
       const video = this.$refs.videoRef;

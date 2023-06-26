@@ -14,6 +14,7 @@
             </div>
         </div>
         <FindUs class="find"></FindUs>
+        <Footer></Footer>
     </div>
 </template>
 
@@ -21,9 +22,10 @@
 import NavbarCustom from '@/components/navBar.vue'
 import FishGalleryImage from '@/components/FishGalleryImage.vue'
 import FindUs from '@/components/FindUs.vue'
+import Footer from '@/components/Footer.vue'
 import { collection, getDocs } from "firebase/firestore";
 export default {
-    components: {NavbarCustom, FishGalleryImage, FindUs},
+    components: {NavbarCustom, FishGalleryImage, FindUs, Footer},
     data() {
         return {
             fishies: [],
@@ -75,10 +77,6 @@ export default {
     position: relative;
     margin: auto;
     margin-top: 5%;
-}
-
-.find {
-    margin-left: 5vw;
 }
 
 
