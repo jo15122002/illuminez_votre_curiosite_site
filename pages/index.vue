@@ -381,6 +381,25 @@ body{
   color: #02295F;
 }
 
+.arrowsvg{
+  height: 24px;
+  aspect-ratio: 1/1;
+  -webkit-mask: url("./assets/images/arrow.svg") no-repeat center;
+  mask: url("./assets/images/arrow.svg") no-repeat center;
+}
+
+.backWhite{
+  background-color: white;
+}
+
+.backGreen{
+  background-color: #3AA098;
+}
+
+.backBlue{
+  background-color: #02295F;
+}
+
 @media screen and (max-width: 1250px) {
   .description-container{
     width: 90vw;
@@ -428,24 +447,5 @@ body{
     flex-direction: column;
   }
 
-}
-
-.arrowsvg{
-  height: 24px;
-  aspect-ratio: 1/1;
-  -webkit-mask: url("./assets/images/arrow.svg") no-repeat center;
-  mask: url("./assets/images/arrow.svg") no-repeat center;
-}
-
-.backWhite{
-  background-color: white;
-}
-
-.backGreen{
-  background-color: #3AA098;
-}
-
-.backBlue{
-  background-color: #02295F;
 }
 </style>
