@@ -1,34 +1,37 @@
 <template>
     <div class="card">
         <div class="logoPin">
-            <img :src=props.logoPath alt="">
+            <img :src="logoPath" alt="">
         </div>
         <br>
-        <h1>{{ $t(props.title) }}</h1>
-        <p>{{ $t(props.description) }}</p>
-        <a :href=props.buttonRef class="button">{{ $t("seeMore") }}<div class="arrowsvg backGreen"></div></a>
+        <h1>{{ $t(title) }}</h1>
+        <p>{{ $t(description) }}</p>
+        <a :href=buttonRef class="button">{{ $t("seeMore") }}<div class="arrowsvg backGreen"></div></a>
     </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  logoPath: {
-    type: String,
-    default: "_nuxt/assets/images/labo.png",
-  },
-  title: {
-    type: String,
-    default: "La réaction chimique",
-  },
-  description: {
-      type: String,
-      default: "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage.",
-  },
-  buttonRef: {
-      type: String,
-      default: "#video",
-  },
-});
+
+<script>
+export default {
+    props: {
+        logoPath: {
+            type: String,
+            default: "/images/labo.png",
+        },
+        title: {
+            type: String,
+            default: "La réaction chimique",
+        },
+        description: {
+            type: String,
+            default: "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usage.",
+        },
+        buttonRef: {
+            type: String,
+            default: "#video",
+        }
+    },
+}
 </script>
 
 <style scoped>

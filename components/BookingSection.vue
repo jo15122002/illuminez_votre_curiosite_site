@@ -49,12 +49,13 @@
         </div>
     </div>
 </template>
+
 <script setup>
 import { ref, onMounted, watchEffect } from 'vue';
 
 let number = 7
 if (process.client) {
-    number = window.innerHeight > 1250 ? 7 : 3 
+    number = window.innerWidth > 1250 ? 7 : 3
 }
 
 const uniqueDates = ref([]);
@@ -314,7 +315,7 @@ watchEffect(() => {
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    height: 100%;
+    height: 3vh;
     align-self: center;
     background-color: white;
 }
@@ -420,6 +421,7 @@ watchEffect(() => {
   .daySelect {
     justify-content: space-between;
     width: 100%;
+    height: 10vh;
   }
 
   .bg-calamar-img {

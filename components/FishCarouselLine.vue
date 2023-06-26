@@ -113,7 +113,7 @@ img {
 
 .seeMore {
   height: 302px;
-  width: 450px;
+  width: 400px;
   background-color: #F0F0F0;
   position: absolute;
   right: 0;
