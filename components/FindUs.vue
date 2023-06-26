@@ -25,8 +25,8 @@ export default {
   .findUs{
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    margin:0px;
+    width:100% !important;
+    margin:0px !important;
   }
 
   .findUs img{
@@ -37,7 +37,7 @@ export default {
     display: flex;
     flex-direction: column;
     width: 77.7%;
-    margin: auto;
+    margin: auto !important;
     justify-content: center;
   }
 
@@ -56,7 +56,7 @@ export default {
 
   .button{
     font-size: 110%;
-    width: 78.78%;
+    width: 60%;
     border-radius: 37px;
   }
 }
