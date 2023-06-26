@@ -10,7 +10,7 @@
           <p>{{ $t('description.content') }}</p>
           <div class="flex-row buttons-container">
             <a href="#buySection" class="button buyButton">{{ $t('description.button.book') }}</a>
-            <a href="#video" class="button videoButton">{{ $t('description.button.video') }}</a>
+            <a href="#video" class="button videoButton flex-row">{{ $t('description.button.video') }} <div class="arrowsvg backWhite"></div></a>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
     <div class="carouselContainer">
       <FishCarousel class="fishCarousel"></FishCarousel>
       <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
-      <p class="seeMoreDescription">Retrouvez votre poisson personnalisé lors de l’exposition</p>
+      <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
     </div>
   </div>
 
@@ -428,5 +428,20 @@ body{
     flex-direction: column;
   }
 
+}
+
+.arrowsvg{
+  height: 100%;
+  aspect-ratio: 1/1;
+  -webkit-mask: url("./assets/images/arrow.svg") no-repeat center;
+  mask: url("./assets/images/arrow.svg") no-repeat center;
+}
+
+.backWhite{
+  background-color: white;
+}
+
+.backGreen{
+  background-color: #3AA098;
 }
 </style>
