@@ -425,8 +425,12 @@ body{
   }
 
   #discover .description-container{
-  background-position: 200% 120%;
-}
+    background-position: 200% 120%;
+  }
+
+  #discover .description-container h1{
+    width: 75%;
+  }
 }
 </style>
 
@@ -461,7 +465,7 @@ body{
     justify-content: center;
   }
   .content-div h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   #discover {
