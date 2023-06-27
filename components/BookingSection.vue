@@ -438,6 +438,28 @@ watchEffect(() => {
   .hour{
     border-radius: 10% / 30%;
   }
+
+  .input {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .selected-date-range {
+    font-size: 1rem;
+  }
+
+  .weekSelectionButton {
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 650px) {
+    .reservation-form {
+        height:250vh;
+        top: 0;
+    }
+  
 }
 </style>
 
