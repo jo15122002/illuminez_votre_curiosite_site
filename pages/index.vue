@@ -464,12 +464,36 @@ body{
     height: 15vh;
     justify-content: center;
   }
+
   .content-div h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+    line-height: 100%;
   }
 
   #discover {
     margin-bottom: 2vh;
+  }
+
+  .buttons-container{
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .buttons-container .button{
+    font-size: 5vw;
+    border-radius: 10% / 30%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+  }
+
+  .buttons-container .videoButton {
+    margin-top: 5%;
+    margin-right: 25%;
+  }
+
+  .buttons-container .buyButton{
+    margin-right: 40%;
   }
 }
 </style>
