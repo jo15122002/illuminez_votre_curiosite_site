@@ -2,7 +2,7 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <img :src="items[i] ? items[i].data : '_nuxt/assets/exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px">
+        <img :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px">
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3">
