@@ -404,7 +404,7 @@ body{
   background-color: #02295F;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 900px) {
   .description-container{
     width: 90vw;
     height: max-content;
@@ -437,7 +437,7 @@ body{
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .content-div .date{
     font-size: 18px;
     margin-bottom: 2vh;
@@ -448,7 +448,7 @@ body{
 
 <style>
 
-@media (max-width: 1440px){
+@media (max-width: 900px){
   .no-mobile {
     display: none;
   }

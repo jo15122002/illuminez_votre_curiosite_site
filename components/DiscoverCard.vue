@@ -84,7 +84,7 @@ export default {
         line-height: 37px;
     }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 900px) {
   .card {
     width: auto;
     margin-bottom: 10vh;
@@ -97,7 +97,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 900px) {
   .button{
     width: 50%;
     font-size: 1.5rem;

@@ -98,7 +98,7 @@ export default {
     z-index: 2;
 }
 
-@media (max-width: 1440px){
+@media (max-width: 900px){
   .navbar-items-container{
     flex-direction: column;
     font-size: 2rem;
@@ -115,7 +115,7 @@ export default {
   }
 
   .navbar-item {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
   .small {
@@ -125,12 +125,6 @@ export default {
   .logo {
     margin-top: 2vh;
     width: 8vw;
-  }
-}
-
-@media (max-width: 900px){
-  .navbar-item{
-    font-size: 0.75rem;
   }
 }
 </style>
