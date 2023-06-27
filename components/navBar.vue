@@ -127,4 +127,10 @@ export default {
     width: 8vw;
   }
 }
+
+@media (max-width: 800px){
+  .navbar-items{
+    font-size: 0.75rem;
+  }
+}
 </style>

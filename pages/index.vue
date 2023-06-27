@@ -479,7 +479,7 @@ body{
   }
 
   #discover {
-    margin-bottom: 2vh;
+    margin-bottom: 10vh;
   }
 
   .buttons-container{
