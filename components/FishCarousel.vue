@@ -54,7 +54,7 @@ export default {
       })
     },
     onResize() {
-      this.windowFull = window.innerWidth > 1250
+      this.windowFull = window.innerWidth > 900
     }
   }
 }

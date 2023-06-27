@@ -2,13 +2,17 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <img :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px">
+        <div v-if="carousel === 3 && !windowFull && i===5" class="seeMoreSmall">
+          <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
+          <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
+        </div>
+        <img v-else :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px;position: absolute;">
       </div>
     </div>
-    <div class="seeMore" v-if="carousel === 3">
+    <div class="seeMore" v-if="carousel === 3 && windowFull">
         <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
         <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
-      </div>
+    </div>
   </div>
 </template>
 
@@ -31,6 +35,11 @@ export default {
       default:1
     }
   },
+  data() {
+    return {
+      windowFull: true
+    }
+  },
   components: {
     FishCarouselLineElement,
   },
@@ -40,53 +49,67 @@ export default {
     }
   },
   mounted() {
-    const imgArrConst = gsap.utils.toArray(".image-div"+this.carousel+" .imgC")
-
-    gsap.set(imgArrConst, {left: 0})
-
-    let imagesPosition = 0
-
-    let totalW = 0
-    
-    let imgWidths = {}
-      
-    imgArrConst.map((img,i) => {
-      let imgWidth = img.getBoundingClientRect().width
-      //initial left position depending on previous photos
-      let leftPosition = imagesPosition
-      //positioning the images before moving them
-      gsap.set(img, {left: (leftPosition)  } )
-      imagesPosition += imgWidth
-      //calculating total imgs width
-      totalW += imgWidth
-      //create hash of width per index
-      imgWidths[i] = totalW
-    })
-
-
-    let additionalX = { val: 0 };
-    let offset = 0;
-
-    gsap.to(imgArrConst, {
-      x: this.reverse ? `+=${totalW}` : `-=${totalW}`,
-      duration: 80,
-      repeat: -1,
-      ease: 'none',
-      modifiers: {
-        x: (x,arr) => {
-          const imgIndex = arr.getAttribute('data-index')
-
-          let maxLeftTravel = -imgWidths[imgIndex]
-
-          //figuring out what is it's maxrightposition so i can wrap it         
-          let rightPositioning = (330 * 5) + maxLeftTravel
-          //wrapping 
-          var mod = gsap.utils.wrap(maxLeftTravel, rightPositioning)
-          offset += additionalX.val       
-          return `${mod(parseFloat(x) + offset) }px`
-        } 
+    this.onResize()
+    window.addEventListener('resize', this.onResize)
+    this.carouselStart()
+  },
+  methods: {
+    onResize() {
+      this.windowFull = window.innerWidth > 900
+      this.carouselStart()
+    },
+    carouselStart() {
+      const imgArrConst = gsap.utils.toArray(".image-div"+this.carousel+" .imgC")
+      if (!this.windowFull) {
+        console.log('###', imgArrConst)
       }
-    })
+
+      gsap.set(imgArrConst, {left: 0})
+
+      let imagesPosition = 0
+
+      let totalW = 0
+      
+      let imgWidths = {}
+        
+      imgArrConst.map((img,i) => {
+        let imgWidth = img.getBoundingClientRect().width
+        //initial left position depending on previous photos
+        let leftPosition = imagesPosition
+        //positioning the images before moving them
+        gsap.set(img, {left: (leftPosition)  } )
+        imagesPosition += imgWidth
+        //calculating total imgs width
+        totalW += imgWidth
+        //create hash of width per index
+        imgWidths[i] = totalW
+      })
+
+
+      let additionalX = { val: 0 };
+      let offset = 0;
+
+      gsap.to(imgArrConst, {
+        x: this.reverse ? `+=${totalW}` : `-=${totalW}`,
+        duration: 80,
+        repeat: -1,
+        ease: 'none',
+        modifiers: {
+          x: (x,arr) => {
+            const imgIndex = arr.getAttribute('data-index')
+
+            let maxLeftTravel = -imgWidths[imgIndex]
+
+            //figuring out what is it's maxrightposition so i can wrap it         
+            let rightPositioning = (330 * 5) + maxLeftTravel
+            //wrapping 
+            var mod = gsap.utils.wrap(maxLeftTravel, rightPositioning)
+            offset += additionalX.val       
+            return `${mod(parseFloat(x) + offset) }px`
+          } 
+        }
+      })
+    }
   }
 }
 </script>
@@ -142,6 +165,18 @@ img {
   width: 90%;
 }
 
+.seeMoreSmall {
+  background-color: rgba(176, 208, 225,0.4);
+  width:300px;
+  height:300px;
+  position: absolute;
+  border-radius: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
 @media (max-width: 900px){
   .seeMore {
     width: 50vw;
@@ -149,25 +184,8 @@ img {
 
   .seeMoreButton {
     font-size: 1rem;
-  }
-
-  .seeMoreDescription {
-    font-size: 1rem;
-    width: 80%;
-  }
-}
-
-@media (max-width: 1050px){
-  .seeMore {
-    width: 50vw;
-    right: -1vw;
-  }
-
-  .seeMoreButton {
-    font-size: 1rem;
-    margin-right: 2vw;
-    height: 3vh;
-    width: 20vw;
+    top: -2vh;
+    right: 2vw;
   }
 
   .seeMoreDescription {
