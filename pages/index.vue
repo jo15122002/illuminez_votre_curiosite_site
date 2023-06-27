@@ -431,6 +431,10 @@ body{
   #discover .description-container h1{
     width: 75%;
   }
+
+  .content-div{
+    width: 80vw;
+  }
 }
 
 @media screen and (max-width: 1200px) {
