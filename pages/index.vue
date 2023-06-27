@@ -490,7 +490,7 @@ body{
 
   .buttons-container .button{
     font-size: 5vw;
-    border-radius: 10% / 30%;
+    border-radius: 5% / 30%;
     padding-top: 1vh;
     padding-bottom: 1vh;
   }
