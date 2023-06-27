@@ -73,7 +73,7 @@ export default {
 .navbar-item{
   padding-left: 3.3vw;
   padding-right: 3.3vw;
-  color: white;
+  color: #02295F;
   text-decoration: none;
   font-family: 'Red Hat Display';
   font-weight: 600;
@@ -95,7 +95,7 @@ export default {
     z-index: 2;
 }
 
-@media (max-width: 1250px){
+@media (max-width: 1440px){
   .navbar-items-container{
     flex-direction: column;
     font-size: 2rem;

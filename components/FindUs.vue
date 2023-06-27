@@ -21,7 +21,7 @@ export default {
 
 <style scoped>
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .findUs{
     flex-direction: column;
     align-items: center;

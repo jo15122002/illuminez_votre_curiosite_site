@@ -71,7 +71,7 @@ export default {
         justify-content: space-around;
     }
 
-    @media (max-width: 1250px){
+    @media (max-width: 1440px){
       .carousel {
         justify-content: space-between;
       }

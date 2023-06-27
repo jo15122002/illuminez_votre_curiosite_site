@@ -25,7 +25,7 @@
   </div>
 
   <div id="discover" class="flex-row content-div">
-    <div class="flex-column half-width description-container">
+    <div class="flex-column description-container">
       <div class="description">
         <h1>{{ $t('discover.title') }}</h1>
         <div class="bloc-content">
@@ -120,6 +120,7 @@ export default {
   background: url("~/assets/images/meduse.png") no-repeat center center;
   background-position: 80% 130%;
   width:100%;
+  height: 100%;
 }
 
 body{
@@ -201,6 +202,16 @@ body{
   display: flex;
   height: 100vh;
   width: 40vw;
+}
+
+#discover .description-container{
+  width: 100%;
+  background: url("~/assets/images/meduse.png") no-repeat center center;
+  background-position: 80% 130%;
+}
+
+#discover .description-container h1{
+  width: 50%;
 }
 
 .navbar-items-container{
@@ -393,7 +404,7 @@ body{
   background-color: #02295F;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .description-container{
     width: 90vw;
     height: max-content;
@@ -412,12 +423,20 @@ body{
     position: relative;
     top: 5vh;
   }
+
+  #discover .description-container{
+    background-position: 200% 120%;
+  }
+
+  #discover .description-container h1{
+    width: 75%;
+  }
 }
 </style>
 
 <style>
 
-@media (max-width: 1250px){
+@media (max-width: 1440px){
   .no-mobile {
     display: none;
   }
@@ -446,7 +465,7 @@ body{
     justify-content: center;
   }
   .content-div h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   #discover {

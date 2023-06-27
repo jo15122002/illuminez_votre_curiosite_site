@@ -84,12 +84,16 @@ export default {
         line-height: 37px;
     }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1440px) {
   .card {
     width: auto;
     margin-bottom: 10vh;
     display: flex;
     flex-direction: column;
+  }
+
+  .button{
+    width: 20%;
   }
 }
 .arrowsvg{
