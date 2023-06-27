@@ -59,6 +59,12 @@ export default {
     width: 60%;
     border-radius: 37px;
   }
+
+  .findUs .buyButton{
+    width: auto;
+    margin-right: 14% !important;
+    border-radius: 7% / 30%;
+  }
 }
 
 .findUs {
