@@ -2,7 +2,7 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <img :src="items[i] ? items[i].data : '_nuxt/assets/exemples/'+randomIntFromInterval+'.png'" style="width:300px">
+        <img :src="items[i] ? items[i].data : '_nuxt/assets/exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px">
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3">
@@ -149,6 +149,25 @@ img {
 
   .seeMoreButton {
     font-size: 1rem;
+  }
+
+  .seeMoreDescription {
+    font-size: 1rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 1050px){
+  .seeMore {
+    width: 50vw;
+    right: -1vw;
+  }
+
+  .seeMoreButton {
+    font-size: 1rem;
+    margin-right: 2vw;
+    height: 3vh;
+    width: 20vw;
   }
 
   .seeMoreDescription {
