@@ -3,7 +3,7 @@
     <img :src="dataImg" class="imgFish">
     <p class="fishName">{{ nameImg }}</p>
     <a class="save" :download="nameImg+'.png'" :href="dataImg">
-        <img src="~/assets/images/download.png">
+        <img src="~/assets/images/download.svg">
     </a>
   </div>
 </template>
