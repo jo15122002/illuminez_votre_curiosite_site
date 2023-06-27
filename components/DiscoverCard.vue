@@ -96,6 +96,14 @@ export default {
     width: 20%;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .button{
+    width: 50%;
+    font-size: 1.5rem;
+    border-radius: 40px;
+  }
+}
 .arrowsvg{
         height: 24px;
         aspect-ratio: 1/1;

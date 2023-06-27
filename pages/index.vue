@@ -432,6 +432,13 @@ body{
     width: 75%;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .content-div .date{
+    font-size: 18px;
+  }
+}
+
 </style>
 
 <style>
@@ -448,6 +455,7 @@ body{
   .content-div{
     flex-direction: column;
     height: max-content;
+    margin-top: 10vh;
   }
 
   .discoverCardContainer{
