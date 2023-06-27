@@ -186,6 +186,7 @@ img {
     font-size: 1rem;
     top: -2vh;
     right: 2vw;
+    width: 25vw;
   }
 
   .seeMoreDescription {
