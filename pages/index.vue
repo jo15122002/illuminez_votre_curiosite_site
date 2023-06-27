@@ -440,6 +440,7 @@ body{
 @media screen and (max-width: 1200px) {
   .content-div .date{
     font-size: 18px;
+    margin-bottom: 2vh;
   }
 }
 
