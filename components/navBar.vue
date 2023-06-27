@@ -1,6 +1,6 @@
 <template>
   <div class="navbar" :style="windowFull? '' : 'display:none'">
-    <img src="~/assets/images/logo.png" alt="logo" class="logo">
+    <img @click="returnMain" src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
       <a href="/#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
       <a href="/#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
@@ -42,6 +42,9 @@ export default {
                 this.$i18n.locale = 'fr';
             }
         },
+        returnMain() {
+            this.$router.push('/')
+        }
     }
 }
 </script>
@@ -83,8 +86,8 @@ export default {
 
 .small{
     background-color: #C5E2A6;
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     position: absolute;
     right: 2vw;
     top: 2vh;
@@ -117,6 +120,11 @@ export default {
 
   .small {
     display: flex;
+  }
+
+  .logo {
+    margin-top: 2vh;
+    width: 8vw;
   }
 }
 </style>
