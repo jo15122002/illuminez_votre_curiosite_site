@@ -69,6 +69,9 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
+
 .content {
     display: flex;
     justify-content: space-around;
@@ -104,5 +107,33 @@ export default {
 
 .find {
     margin-bottom: 5vh;
+}
+
+.button{
+  text-decoration: none;
+  display: flex;
+  width: auto;
+  height: auto;
+  border-radius: 3.4vw;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  padding-right: 1.5vw;
+  padding-left: 1.5vw;
+
+  padding-bottom: 1.8vh;
+  padding-top: 1.8vh;
+
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 37px;
+}
+
+.buyButton{
+  background-color: #3AA098;
+  color: white;
+  margin-right: 27px;
 }
 </style>
