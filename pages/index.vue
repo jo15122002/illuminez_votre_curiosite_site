@@ -41,9 +41,9 @@
     </div>
     </div>
     <div class="discoverCardContainer flex-row">
-      <DiscoverCard :title="title1" :description="description1"/>
-      <DiscoverCard :title="title2" :description="description2"/>
-      <DiscoverCard :title="title3" :description="description3"/>
+      <DiscoverCard :title="title1" :description="description1" data-aos="fade-up" data-aos-duration="800"/>
+      <DiscoverCard :title="title2" :description="description2" data-aos="fade-up" data-aos-duration="1000"/>
+      <DiscoverCard :title="title3" :description="description3" data-aos="fade-up" data-aos-duration="1200"/>
     </div>
 
     <section data-aos="fade-up" data-aos-duration="800">
