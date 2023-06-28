@@ -429,6 +429,7 @@ body{
 .findUsContainer{
   justify-content: space-around;
   margin-bottom: 5%;
+  margin-top: 5%;
 }
 
 .footer{
