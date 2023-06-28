@@ -141,4 +141,11 @@ export default {
   color: white;
   margin-right: 27px;
 }
+
+@media (max-width: 900px){
+    .buttons-container .buyButton{
+        font-size: 1.25rem;
+        margin-bottom: 5vh;
+    }
+}
 </style>

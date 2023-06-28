@@ -512,6 +512,11 @@ body{
 
   .buttons-container .buyButton{
     margin-right: 40%;
+    font-size: 1.25rem;
+  }
+
+  .button {
+    font-size: 1.25rem;
   }
 }
 </style>
