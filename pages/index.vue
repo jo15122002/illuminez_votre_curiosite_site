@@ -259,12 +259,25 @@ body{
 
 .buyButton{
   background-color: #3AA098;
+  border: #3AA098 1px solid;
   color: white;
   margin-right: 27px;
 }
 
+.buyButton:hover{
+  background-color: white;
+  color: #3AA098;
+  margin-right: 27px;
+  transition: 0.1s ease;
+}
+
+.buyButton:hover .arrowsvg{
+  background-color: #3AA098;
+}
+
 .videoButton{
   background-color: #C5E2A6;
+  border : #C5E2A6 1px solid;
   color: #02295F;
 }
 
