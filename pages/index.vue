@@ -418,10 +418,11 @@ body{
   }
 
   .carouselContainer {
-    width: 90vw;
+    width: 100vw;
     height: 310px;
     position: relative;
     top: 5vh;
+    left:-10vw
   }
 
   #discover .description-container{

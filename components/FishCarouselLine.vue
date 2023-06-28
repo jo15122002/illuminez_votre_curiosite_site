@@ -2,7 +2,7 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <div v-if="carousel === 3 && !windowFull && i===5" class="seeMoreSmall">
+        <div v-if="carousel === 3 && !windowFull && (i === 1 || i === 3)" class="seeMoreSmall">
           <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
           <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
         </div>
@@ -86,7 +86,7 @@ export default {
       })
 
 
-      let additionalX = { val: 0 };
+      let additionalX = { val: !this.windowFull ? -0.25 : 0 };
       let offset = 0;
 
       gsap.to(imgArrConst, {
@@ -185,13 +185,13 @@ img {
   .seeMoreButton {
     font-size: 1rem;
     top: -2vh;
-    right: 2vw;
+    right: 4vw;
     width: 25vw;
   }
 
   .seeMoreDescription {
     font-size: 1rem;
-    width: 80%;
+    width: 85%;
   }
 }
 </style>
