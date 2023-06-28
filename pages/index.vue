@@ -345,7 +345,7 @@ body{
 
 .discoverCardContainer{
   justify-content: space-between;
-  width: 84.9%;
+  width: 90%;
   margin: auto;
 }
 
