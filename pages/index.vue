@@ -104,10 +104,12 @@ export default {
       const video = this.$refs.videoRef;
       video.muted = !video.muted;
 
+      gsap.set(".sound-indicator", {opacity: 0});
+
       this.soundIndicatorSrc = video.muted ? '/images/sound-off.png' : '/images/sound-on.png'
       setTimeout(() => {
-        gsap.to(".sound-indicator", {duration: 0.66, opacity: 1, yoyo: true, repeat: 1})
-      }, 50)
+        this.soundIndicatorAnimation = gsap.to(".sound-indicator", {duration: 0.66, opacity: 1, yoyo: true, repeat: 1})
+      }, 100)
     },
   },
 };
