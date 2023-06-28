@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3 && windowFull">
-        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
+        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}<img class="imgArrow" src="~/assets/images/arrow.svg"></a>
         <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
     </div>
   </div>
@@ -135,6 +135,12 @@ img {
   border-radius: 20px;
 }
 
+.imgArrow {
+  border:none;
+  border-radius: 0;
+  margin-left: 5px;
+}
+
 .seeMore {
   height: 302px;
   width: 400px;
@@ -152,6 +158,8 @@ img {
   position: relative;
   right: 1vw;
   top: 2vh;
+  color:white;
+  border-radius: 15px;
 }
 
 .seeMoreDescription {
