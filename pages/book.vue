@@ -142,10 +142,40 @@ export default {
   margin-right: 27px;
 }
 
+.navbar{
+  margin: auto;
+  margin-top: 3%;
+  width: 91.7vw;
+  height: 11.8vh;
+  border-radius: 20px;
+  background-color: #C5E2A6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-items-container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 @media (max-width: 900px){
     .buttons-container .buyButton{
         font-size: 1.25rem;
         margin-bottom: 5vh;
+    }
+
+    .navbar{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        position: absolute;
+        left: 0%;
+        display: none;
+        height: 15vh;
+        justify-content: center;
     }
 }
 </style>

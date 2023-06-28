@@ -78,6 +78,7 @@ export default {
   top: 0;
   right: 0;
   border-radius: 7px;
+  font-size: 1.25rem;
 }
 
 .buttonMobile {
