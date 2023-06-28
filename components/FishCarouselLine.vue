@@ -2,11 +2,7 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <div v-if="carousel === 3 && !windowFull && (i === 1 || i === 3)" class="seeMoreSmall">
-          <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
-          <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
-        </div>
-        <img v-else :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px;position: absolute;">
+        <img :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px;position: absolute;">
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3 && windowFull">

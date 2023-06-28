@@ -3,6 +3,9 @@
         <FishCarouselLine :reverse="false" :items="linesItems[1]" :carousel="1" v-if="windowFull"/>
         <FishCarouselLine :reverse="true" :items="linesItems[2]" :carousel="2" v-if="windowFull" />
         <FishCarouselLine :reverse="false" :items="linesItems[3]" :carousel="3"/>
+        <div v-if="!windowFull" class="buttonMobile">
+          <a href="/book" class="button seeMoreButton">{{ $t('findYourFishCTAMobile') }}</a>
+        </div>
     </div>
 </template>
 
@@ -61,19 +64,31 @@ export default {
 </script>
 
 <style scoped>
-    .carousel {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
+.carousel {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.seeMoreButton {
+  width: 50vw;
+  top: 0;
+  right: 0;
+  border-radius: 7px;
+}
 
-    @media (max-width: 900px){
-      .carousel {
-        justify-content: space-between;
-      }
-    }
+.buttonMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 900px){
+  .carousel {
+    justify-content: space-between;
+  }
+}
 </style>
