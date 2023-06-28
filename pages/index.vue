@@ -1,7 +1,7 @@
 <template>
   <NavbarCustom></NavbarCustom>
 
-  <div class="flex-row content-div">
+  <div class="flex-row content-div" data-aos="fade-up" data-aos-duration="800">
     <div class="flex-column description-container">
       <div class="description">
         <h4 class="date">&nbsp;{{ $t('description.date') }}</h4>
@@ -25,7 +25,7 @@
     <video src="~/assets/video/bioluminescence.mp4" loop muted preload="metadata" autoplay ref="videoRef" @click="toggleMute"></video>
   </div>
 
-  <div id="discover" class="flex-row content-div">
+  <div id="discover" class="flex-row content-div" data-aos="fade-up" data-aos-duration="800">
     <div class="flex-column description-container">
       <div class="description">
         <h1>{{ $t('discover.title') }}</h1>
@@ -46,11 +46,11 @@
       <DiscoverCard :title="title3" :description="description3"/>
     </div>
 
-    <section>
+    <section data-aos="fade-up" data-aos-duration="800">
       <BookingSection id="buySection"></BookingSection>
     </section>
 
-    <div class="findUsContainer flex-row">
+    <div class="findUsContainer flex-row" data-aos="fade-up" data-aos-duration="800">
       <FindUs></FindUs>
     </div>
 
@@ -60,6 +60,9 @@
 <script setup>
 import { ref } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const title1 = "La réaction chimique"
 const description1 = "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques."
@@ -85,6 +88,16 @@ watch(isVisible, (newVisibility) => {
     videoRef.value.pause();
   }
 });
+
+onMounted(() => {
+  AOS.init({
+    once: true, // Animation exécutée une seule fois
+    offset: 200, // Décalage avant l'apparition de l'élément (en pixels)
+    duration: 800, // Durée de l'animation (en millisecondes)
+    easing: 'ease-in-out', // Type d'interpolation de l'animation
+  });
+});
+
 </script>
 
 <script>
