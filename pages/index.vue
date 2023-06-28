@@ -240,7 +240,7 @@ body{
   display: flex;
   width: auto;
   height: auto;
-  border-radius: 3.4vw;
+  border-radius: 7% / 25%;
   text-align: center;
   justify-content: space-around;
   align-items: center;
