@@ -286,6 +286,7 @@ watchEffect(() => {
 .date-table .buyButton{
     width: 15%;
     margin-left: auto;
+    border-radius: 10% / 30%;
 }
 
 .date-table .buttons-container{
