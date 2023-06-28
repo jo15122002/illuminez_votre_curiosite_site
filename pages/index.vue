@@ -295,7 +295,7 @@ body{
   background-color: white;
   color: #3AA098;
   margin-right: 27px;
-  transition: 0.1s ease;
+  transition: 0.2s ease;
 }
 
 .buyButton:hover .arrowsvg{
@@ -306,6 +306,17 @@ body{
   background-color: #C5E2A6;
   border : #C5E2A6 1px solid;
   color: #02295F;
+}
+
+.videoButton:hover{
+  background-color: #02295F;
+  color: #C5E2A6;
+  transition: 0.2s ease;
+}
+
+.videoButton:hover .arrowsvg{
+  background-color: #C5E2A6;
+  transition: 0.2s ease;
 }
 
 .seeMoreButton{

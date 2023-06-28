@@ -85,6 +85,17 @@ export default {
         line-height: 37px;
     }
 
+    .button:hover{
+        background-color: #3aa098;
+        color: #fefcf8;
+        transition : 0.2s ease;
+    }
+
+    .button:hover .arrowsvg{
+        background-color: #fefcf8;
+        transition : 0.2s ease;
+    }
+
 @media screen and (max-width: 900px) {
   .card {
     width: auto;
