@@ -37,6 +37,7 @@ export default {
 <style scoped>
     .card{
         width: 21.4vw;
+        color: #02295F;
     }
 
     .logoPin{
