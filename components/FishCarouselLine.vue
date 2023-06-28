@@ -2,15 +2,11 @@
   <div class="wraper">
     <div :class="i === 1 ? 'image-div one image-div'+carousel : 'image-div image-div'+carousel" v-for="i in 6" :key="i">
       <div :data-index="i" class="imgC">
-        <div v-if="carousel === 3 && !windowFull && i===5" class="seeMoreSmall">
-          <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
-          <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
-        </div>
-        <img v-else :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px;position: absolute;">
+        <img :src="items[i] ? items[i].data : 'exemples/'+randomIntFromInterval+'.png'" style="width:300px;height:300px;position: absolute;">
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3 && windowFull">
-        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}</a>
+        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}<img class="imgArrow" src="~/assets/images/arrow.svg"></a>
         <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
     </div>
   </div>
@@ -86,7 +82,7 @@ export default {
       })
 
 
-      let additionalX = { val: 0 };
+      let additionalX = { val: !this.windowFull ? -0.25 : 0 };
       let offset = 0;
 
       gsap.to(imgArrConst, {
@@ -139,6 +135,12 @@ img {
   border-radius: 20px;
 }
 
+.imgArrow {
+  border:none;
+  border-radius: 0;
+  margin-left: 5px;
+}
+
 .seeMore {
   height: 302px;
   width: 400px;
@@ -156,6 +158,8 @@ img {
   position: relative;
   right: 1vw;
   top: 2vh;
+  color:white;
+  border-radius: 15px;
 }
 
 .seeMoreDescription {
@@ -185,13 +189,13 @@ img {
   .seeMoreButton {
     font-size: 1rem;
     top: -2vh;
-    right: 2vw;
+    right: 4vw;
     width: 25vw;
   }
 
   .seeMoreDescription {
     font-size: 1rem;
-    width: 80%;
+    width: 85%;
   }
 }
 </style>

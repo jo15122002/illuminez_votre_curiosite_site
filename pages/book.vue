@@ -49,16 +49,21 @@ export default {
     methods: {
         async getAllFishies() {
             const { firestore } = useFirebase()
-            const querySnapshot = await getDocs(collection(firestore, "fish"));
-            querySnapshot.forEach((doc) => {
-                this.fishies.push(doc.data())
-                let currentPage = this.pages.length - 1
-                if (this.pages[currentPage].length === 15) {
-                    currentPage += 1
-                    this.pages[currentPage] = []
-                }
-                this.pages[currentPage].push(doc.data())
-            })
+            try {
+                const querySnapshot = await getDocs(collection(firestore, "fish"));
+                querySnapshot.forEach((doc) => {
+                    this.fishies.push(doc.data())
+                    let currentPage = this.pages.length - 1
+                    if (this.pages[currentPage].length === 15) {
+                        currentPage += 1
+                        this.pages[currentPage] = []
+                    }
+                    this.pages[currentPage].push(doc.data())
+                })
+            } catch(err) {
+                console.error("writeToDB failed. reason :", err)
+            }
+            
         },
         pageChange(page) {
             window.scrollTo({ top: 0 })
