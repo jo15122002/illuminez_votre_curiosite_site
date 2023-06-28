@@ -270,7 +270,7 @@ body{
 
 .seeMoreButton{
   background-color: #3AA098;
-  color: #02295F;
+  color: white;
   position: relative;
   width: 10vw;
   top: -29%;
