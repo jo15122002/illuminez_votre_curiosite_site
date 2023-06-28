@@ -423,7 +423,7 @@ body{
 
   .carouselContainer {
     width: 100vw;
-    height: 430px;
+    height: 410px;
     position: relative;
     top: 5vh;
     left:-10vw
