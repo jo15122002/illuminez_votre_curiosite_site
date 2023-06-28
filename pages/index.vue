@@ -21,6 +21,7 @@
   </div>
 
   <div class="fullScreen video-container" id="video">
+    <img class="sound-indicator" :src="soundIndicatorSrc" alt=""/>
     <video src="~/assets/video/bioluminescence.mp4" loop muted preload="metadata" autoplay ref="videoRef" @click="toggleMute"></video>
   </div>
 
@@ -90,12 +91,23 @@ watch(isVisible, (newVisibility) => {
 import Footer from '@/components/Footer.vue'
 import FindUs from '@/components/FindUs.vue'
 import NavbarCustom from '@/components/navBar.vue'
+import { gsap } from 'gsap'
 export default {
+  data() {
+    return {
+      soundIndicatorSrc: '/images/sound-off.png',
+    };
+  },
   computed: { NavbarCustom, FindUs, Footer },
   methods: {
     toggleMute() {
       const video = this.$refs.videoRef;
       video.muted = !video.muted;
+
+      this.soundIndicatorSrc = video.muted ? '/images/sound-off.png' : '/images/sound-on.png'
+      setTimeout(() => {
+        gsap.to(".sound-indicator", {duration: 0.66, opacity: 1, yoyo: true, repeat: 1})
+      }, 50)
     },
   },
 };
@@ -344,12 +356,26 @@ body{
   margin: 0px;
   margin-top: 10vh;
   aspect-ratio: 16/9;
+  position: relative;
 }
 
 .video-container video{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.sound-indicator{
+  filter: invert(100%);
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1%;
+  border-radius: 50%;
+  opacity: 0%;
 }
 
 #discover{
