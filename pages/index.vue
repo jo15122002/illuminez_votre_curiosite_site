@@ -106,6 +106,10 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+html{
+  scroll-behavior: smooth;
+}
+
 .full-screen-section {
     display: flex;
     justify-content: center;
