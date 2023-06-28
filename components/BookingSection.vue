@@ -452,6 +452,10 @@ watchEffect(() => {
   .weekSelectionButton {
     height: auto;
   }
+
+  .input{
+    margin: auto;
+  }
 }
 
 @media screen and (max-height: 650px) {
