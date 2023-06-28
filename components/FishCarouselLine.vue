@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="seeMore" v-if="carousel === 3 && windowFull">
-        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}<img class="imgArrow" src="~/assets/images/arrow.svg"></a>
+        <a href="/book" class="button seeMoreButton">{{ $t('seeMore') }}<div class="arrowsvg backWhite"></div></a>
         <p class="seeMoreDescription">{{ $t("findYourFish") }}</p>
     </div>
   </div>

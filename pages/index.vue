@@ -326,6 +326,18 @@ body{
   width: 10vw;
   top: -29%;
   right: -72%;
+  border: 1px solid #3AA098;
+}
+
+.seeMoreButton:hover{
+  background-color: white;
+  color: #3AA098;
+  transition: 0.2s ease;
+}
+
+.seeMoreButton:hover .arrowsvg{
+  background-color: #3AA098;
+  transition: 0.2s ease;
 }
 
 .seeMoreDescription{
