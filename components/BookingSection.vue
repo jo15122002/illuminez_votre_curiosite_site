@@ -42,6 +42,9 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <div class="buttons-container flex-row">
+                                <a href="#buySection" class="button buyButton">{{ $t('description.button.book') }}</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,6 +281,15 @@ watchEffect(() => {
     border-collapse: separate;
     width: 100%;
     border-spacing: 30px;
+}
+
+.date-table .buyButton{
+    width: 15%;
+    margin-left: auto;
+}
+
+.date-table .buttons-container{
+    width: 100%;
 }
 
 .dateContainer{
