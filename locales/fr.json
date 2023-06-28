@@ -20,7 +20,7 @@
   "Décembre": "Décembre",
   "navbar": {
     "home": "Accueil",
-    "book": "Acheter un ticket",
+    "book": "Réserver",
     "exhibition": "Exposition",
     "contact": "Contact"
   },
@@ -28,7 +28,7 @@
     "date": "Exposition de Juin à Décembre 2023",
     "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. Proposez à vos enfants une nouvelle façon de découvrir et s’instruire autour des espèces bioluminescentes, en les laissant en autonomie lors d’une exposition interactive.",
     "button": {
-      "book": "Acheter un ticket",
+      "book": "Réserver",
       "video": "Vidéo de l'exposition"
     }
   },
@@ -36,7 +36,7 @@
     "title": "Ce que vous allez découvrir",
     "content": "La bioluminescence est une réaction chimique que produisent les êtres vivants pour différents usages. La bioluminescence est une réaction chimique que produisent.",
     "button": {
-      "book": "Acheter un ticket"
+      "book": "Réserver"
     }
   },
   "findUs": {
@@ -48,7 +48,7 @@
   },
   "footer": {
     "links": {
-      "book": "Acheter un ticket",
+      "book": "Réserver",
       "exhibition": "Exposition",
       "contact": "Contact"
     },
