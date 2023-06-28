@@ -2,10 +2,14 @@
   <div class="navbar" :style="windowFull? '' : 'display:none'">
     <img @click="returnMain" src="~/assets/images/logo.png" alt="logo" class="logo">
     <div class="navbar-items-container">
-      <a href="/#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
-      <a href="/#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
-      <a href="/#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
-      <div class="navbar-item" @click="toggleLang">FR / EN</div>
+        <a href="/#buySection" class="navbar-item">{{ $t('navbar.book') }}</a>
+        <a href="/#video" class="navbar-item">{{ $t('navbar.exhibition') }}</a>
+        <a href="/#footer" class="navbar-item">{{ $t('navbar.contact') }}</a>
+        <div class="navbar-item" @click="toggleLang">
+            <span :class="$i18n.locale === 'fr' ? 'selectedLang' : ''">FR</span>
+             / 
+            <span :class="$i18n.locale === 'en' ? 'selectedLang' : ''">EN</span>
+        </div>
     </div>
   </div>
   <div class="small" @click="openMenu">
@@ -96,6 +100,10 @@ export default {
     align-items: center;
     justify-content: center;
     z-index: 2;
+}
+
+.selectedLang {
+    font-weight: bold;
 }
 
 @media (max-width: 900px){
