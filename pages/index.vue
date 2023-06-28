@@ -369,7 +369,7 @@ body{
 .video-container{
   overflow: hidden;
   margin: 0px;
-  margin-top: 10vh;
+  margin-top: 20vh;
   aspect-ratio: 16/9;
   position: relative;
 }
