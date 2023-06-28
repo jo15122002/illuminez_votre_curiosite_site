@@ -1,7 +1,7 @@
 <template>
   <NavbarCustom></NavbarCustom>
 
-  <div class="flex-row content-div">
+  <div class="flex-row content-div" data-aos="fade-up" data-aos-duration="800">
     <div class="flex-column description-container">
       <div class="description">
         <h4 class="date">&nbsp;{{ $t('description.date') }}</h4>
@@ -21,10 +21,11 @@
   </div>
 
   <div class="fullScreen video-container" id="video">
+    <img class="sound-indicator" :src="soundIndicatorSrc" alt=""/>
     <video src="~/assets/video/bioluminescence.mp4" loop muted preload="metadata" autoplay ref="videoRef" @click="toggleMute"></video>
   </div>
 
-  <div id="discover" class="flex-row content-div">
+  <div id="discover" class="flex-row content-div" data-aos="fade-up" data-aos-duration="800">
     <div class="flex-column description-container">
       <div class="description">
         <h1>{{ $t('discover.title') }}</h1>
@@ -40,16 +41,16 @@
     </div>
     </div>
     <div class="discoverCardContainer flex-row">
-      <DiscoverCard :title="title1" :description="description1"/>
-      <DiscoverCard :title="title2" :description="description2"/>
-      <DiscoverCard :title="title3" :description="description3"/>
+      <DiscoverCard :title="title1" :description="description1" data-aos="fade-up" data-aos-duration="800"/>
+      <DiscoverCard :title="title2" :description="description2" data-aos="fade-up" data-aos-duration="1000"/>
+      <DiscoverCard :title="title3" :description="description3" data-aos="fade-up" data-aos-duration="1200"/>
     </div>
 
-    <section>
+    <section data-aos="fade-up" data-aos-duration="800">
       <BookingSection id="buySection"></BookingSection>
     </section>
 
-    <div class="findUsContainer flex-row">
+    <div class="findUsContainer flex-row" data-aos="fade-up" data-aos-duration="800">
       <FindUs></FindUs>
     </div>
 
@@ -59,6 +60,9 @@
 <script setup>
 import { ref } from 'vue'
 import { useElementVisibility } from '@vueuse/core'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const title1 = "La réaction chimique"
 const description1 = "Connais-tu les poissons lanternes ? Ce sont des poissons bioluminescents, ça veut dire qu'ils produisent leur propre lumière grâce à une série de réactions chimiques."
@@ -84,18 +88,41 @@ watch(isVisible, (newVisibility) => {
     videoRef.value.pause();
   }
 });
+
+onMounted(() => {
+  AOS.init({
+    once: true, // Animation exécutée une seule fois
+    offset: 200, // Décalage avant l'apparition de l'élément (en pixels)
+    duration: 800, // Durée de l'animation (en millisecondes)
+    easing: 'ease-in-out', // Type d'interpolation de l'animation
+  });
+});
+
 </script>
 
 <script>
 import Footer from '@/components/Footer.vue'
 import FindUs from '@/components/FindUs.vue'
 import NavbarCustom from '@/components/navBar.vue'
+import { gsap } from 'gsap'
 export default {
+  data() {
+    return {
+      soundIndicatorSrc: '/images/sound-off.png',
+    };
+  },
   computed: { NavbarCustom, FindUs, Footer },
   methods: {
     toggleMute() {
       const video = this.$refs.videoRef;
       video.muted = !video.muted;
+
+      gsap.set(".sound-indicator", {opacity: 0});
+
+      this.soundIndicatorSrc = video.muted ? '/images/sound-off.png' : '/images/sound-on.png'
+      setTimeout(() => {
+        this.soundIndicatorAnimation = gsap.to(".sound-indicator", {duration: 0.66, opacity: 1, yoyo: true, repeat: 1})
+      }, 100)
     },
   },
 };
@@ -259,13 +286,37 @@ body{
 
 .buyButton{
   background-color: #3AA098;
+  border: #3AA098 1px solid;
   color: white;
   margin-right: 27px;
 }
 
+.buyButton:hover{
+  background-color: white;
+  color: #3AA098;
+  margin-right: 27px;
+  transition: 0.2s ease;
+}
+
+.buyButton:hover .arrowsvg{
+  background-color: #3AA098;
+}
+
 .videoButton{
   background-color: #C5E2A6;
+  border : #C5E2A6 1px solid;
   color: #02295F;
+}
+
+.videoButton:hover{
+  background-color: #02295F;
+  color: #C5E2A6;
+  transition: 0.2s ease;
+}
+
+.videoButton:hover .arrowsvg{
+  background-color: #C5E2A6;
+  transition: 0.2s ease;
 }
 
 .seeMoreButton{
@@ -275,6 +326,18 @@ body{
   width: 10vw;
   top: -29%;
   right: -72%;
+  border: 1px solid #3AA098;
+}
+
+.seeMoreButton:hover{
+  background-color: white;
+  color: #3AA098;
+  transition: 0.2s ease;
+}
+
+.seeMoreButton:hover .arrowsvg{
+  background-color: #3AA098;
+  transition: 0.2s ease;
 }
 
 .seeMoreDescription{
@@ -329,14 +392,28 @@ body{
 .video-container{
   overflow: hidden;
   margin: 0px;
-  margin-top: 10vh;
+  margin-top: 20vh;
   aspect-ratio: 16/9;
+  position: relative;
 }
 
 .video-container video{
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.sound-indicator{
+  filter: invert(100%);
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1%;
+  border-radius: 50%;
+  opacity: 0%;
 }
 
 #discover{
