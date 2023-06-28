@@ -70,7 +70,7 @@ export default {
         width: 40%;
         height: auto;
         color: #3aa098;
-        border-radius: 3.4vw;
+        border-radius: 10% / 20%;
 
         background-color: #fefcf8;
         border: 2px solid #3aa098;
