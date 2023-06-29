@@ -92,4 +92,10 @@ export default {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+.adress p {
+  font-family : "Red Hat Display";
+  font-style: normal;
+  font-weight: 600;
+}
 </style>
